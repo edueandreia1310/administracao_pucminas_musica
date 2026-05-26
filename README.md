@@ -1,0 +1,1 @@
+Todos direitos reservados do autor e da Pontifícia universidade Católica de Minas Gerais na pessoa da minha orientadora Rosy bem como meu coorientador Gustavo da engenharia elétrica da Pucminas e contribuições da UFMG com Carlos Julio e Cefet - MG na pessoa da professora Úrsula Resende.
