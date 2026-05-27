@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX - Desenvolvedor Parceiro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .pix-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            color: #32BCAD;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .label {
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .pix-key {
+            background: #f5f5f5;
+            border: 2px dashed #32BCAD;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 18px;
+            color: #333;
+            word-break: break-all;
+            margin-bottom: 16px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .copy-btn {
+            background: #32BCAD;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .copy-btn:hover {
+            background: #2aa294;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .message {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #32BCAD;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .message.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="pix-icon">💸</div>
+        <h1>Chave PIX</h1>
+        <p class="subtitle">Desenvolvedor Parceiro</p>
+
+        <div class="label">Tipo: E-mail</div>
+        <div class="pix-key" id="pixKey">desenvedorparceiro@gmail.com</div>
+
+        <button class="copy-btn" onclick="copiarPix()">Copiar Chave PIX</button>
+        <p class="message" id="message">✓ Chave copiada com sucesso!</p>
+    </div>
+
+    <script>
+        function copiarPix() {
+            const chave = document.getElementById('pixKey').innerText;
+            navigator.clipboard.writeText(chave).then(() => {
+                const msg = document.getElementById('message');
+                msg.classList.add('show');
+                setTimeout(() => msg.classList.remove('show'), 2000);
+            });
+        }
+    </script>
+</body>
+</html>
