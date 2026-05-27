@@ -1,148 +1,9 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-/* ============================================================
-   CONFIGURAÇÃO
-   ============================================================ */
-$projectName   = "Produção de Doutorado";
-$projectAuthor = "Eduardo de Souza";
-$projectInstitution = "UFMG";
-$projectSubtitle = "Estudos em Ciências da Religião, musicoterapia e metamaterial sonoro-fotônico.";
-$projectEmail  = "edueandreia@ufmg.br";
-$currentYear   = date('Y');
-$currentMonth  = strftime('%B de %Y'); // fallback abaixo
-$baseDir       = __DIR__;
-
-/* meses em português (strftime depende de locale; garantimos manualmente) */
-$mesesPt = [1=>'janeiro',2=>'fevereiro',3=>'março',4=>'abril',5=>'maio',6=>'junho',
-            7=>'julho',8=>'agosto',9=>'setembro',10=>'outubro',11=>'novembro',12=>'dezembro'];
-$currentMonth = $mesesPt[(int)date('n')] . ' de ' . date('Y');
-
-/* ============================================================
-   LEITURA ITERATIVA DA PASTA
-   ============================================================ */
-$allItems = scandir($baseDir);
-$files = [];
-
-foreach ($allItems as $item) {
-    if ($item === '.' || $item === '..' || $item === 'index.php') {
-        continue;
-    }
-    $fullPath = $baseDir . DIRECTORY_SEPARATOR . $item;
-    if (is_file($fullPath)) {
-        $files[] = [
-            'name'  => $item,
-            'ext'   => strtolower(pathinfo($item, PATHINFO_EXTENSION)),
-            'size'  => filesize($fullPath),
-            'mtime' => filemtime($fullPath),
-        ];
-    }
-}
-
-/* Ordenação: pré-projeto primeiro, depois catalogação/ensaio, depois artigos, depois README/LICENSE */
-usort($files, function($a, $b) {
-    $priority = function($name) {
-        $n = strtolower($name);
-        if (str_contains($n, 'preprojeto') || str_contains($n, 'pre-projeto')) return 1;
-        if (str_contains($n, 'catalogacao')) return 2;
-        if (str_contains($n, 'ensaio')) return 3;
-        if (str_contains($n, 'artigo')) return 4;
-        if (str_contains($n, 'readme')) return 8;
-        if (str_contains($n, 'license')) return 9;
-        return 5;
-    };
-    $pa = $priority($a['name']);
-    $pb = $priority($b['name']);
-    if ($pa !== $pb) return $pa <=> $pb;
-    return strcmp($a['name'], $b['name']);
-});
-
-/* ============================================================
-   FUNÇÕES AUXILIARES
-   ============================================================ */
-function fileTypeLabel(string $ext): string {
-    return match ($ext) {
-        'pdf'           => 'pdf',
-        'doc', 'docx'   => 'docx',
-        'html', 'htm'   => 'html',
-        'tex'           => 'tex',
-        'md'            => 'md',
-        'txt'           => 'txt',
-        'jpg','jpeg','png','gif','webp' => 'img',
-        default         => $ext ?: 'file',
-    };
-}
-
-function fileTypeColor(string $ext): string {
-    return match ($ext) {
-        'pdf'           => 'pdf',
-        'doc', 'docx'   => 'docx',
-        'html', 'htm'   => 'html',
-        'tex'           => 'tex',
-        'md', 'txt'     => 'md',
-        default         => 'default',
-    };
-}
-
-/* Título legível a partir do nome do arquivo */
-function prettyTitle(string $filename): array {
-    $name = pathinfo($filename, PATHINFO_FILENAME);
-    $ext  = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-
-    /* Mapeamento manual para arquivos conhecidos do projeto */
-    $known = [
-        'PreProjeto_Doutorado_Ciencias_Religiao_Eduardo' =>
-            ['Pré-projeto de Doutorado', 'Ciências da Religião — versão integral'],
-        'preprojeto-doutorado' =>
-            ['Pré-projeto · versão web', 'leitura em navegador'],
-        'Catalogacao_Atualizada_e_Resumo_Eduardo_de_Souza' =>
-            ['Catalogação atualizada e resumo', 'panorama da produção acadêmica'],
-        'Ensaio_Final_Eduardo_de_Souza' =>
-            ['Ensaio final', 'texto de fechamento'],
-        'artigo-davi-musicoterapia' => match ($ext) {
-            'pdf'  => ['Davi e a musicoterapia · artigo', 'PDF para impressão e citação'],
-            'html' => ['Davi e a musicoterapia · web', 'versão hipertextual'],
-            'tex'  => ['Davi e a musicoterapia · fonte LaTeX', 'código-fonte para recompilação'],
-            default => ['Davi e a musicoterapia', ''],
-        },
-        'artigo-invencao-melodica' => match ($ext) {
-            'pdf'  => ['Invenção melódica · artigo', 'PDF para impressão e citação'],
-            'html' => ['Invenção melódica · web', 'versão hipertextual'],
-            'tex'  => ['Invenção melódica · fonte LaTeX', 'código-fonte para recompilação'],
-            default => ['Invenção melódica', ''],
-        },
-        'README'  => ['README', 'orientações do repositório'],
-        'LICENSE' => ['Licença', 'termos de uso'],
-    ];
-
-    if (isset($known[$name])) {
-        return $known[$name];
-    }
-
-    /* fallback: transforma underscores e hifens em espaços */
-    $title = str_replace(['_', '-'], ' ', $name);
-    $title = ucwords($title);
-    return [$title, ''];
-}
-
-/* Formato de tamanho legível */
-function humanSize(int $bytes): string {
-    if ($bytes < 1024) return $bytes . ' B';
-    if ($bytes < 1048576) return round($bytes / 1024, 1) . ' KB';
-    if ($bytes < 1073741824) return round($bytes / 1048576, 1) . ' MB';
-    return round($bytes / 1073741824, 1) . ' GB';
-}
-
-$totalFiles = count($files);
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= htmlspecialchars($projectName) ?> — <?= htmlspecialchars($projectAuthor) ?></title>
+<title>Produção de Doutorado — Eduardo de Souza</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -172,6 +33,7 @@ $totalFiles = count($files);
     line-height: 1.6;
   }
 
+  /* Textura sutil de papel */
   body::before {
     content: '';
     position: fixed;
@@ -205,6 +67,7 @@ $totalFiles = count($files);
   header {
     padding: 80px 0 60px;
     border-bottom: 1px solid var(--rule);
+    position: relative;
   }
 
   .header-grid {
@@ -240,6 +103,7 @@ $totalFiles = count($files);
     line-height: 1.02;
     letter-spacing: -0.02em;
     margin: 0 0 24px;
+    color: var(--ink);
   }
 
   h1 em {
@@ -272,7 +136,7 @@ $totalFiles = count($files);
     font-weight: 500;
   }
 
-  /* INTRO */
+  /* INTRO / RESUMO */
   .intro {
     padding: 60px 0;
     display: grid;
@@ -308,8 +172,10 @@ $totalFiles = count($files);
     font-weight: 600;
   }
 
-  /* ARQUIVOS */
-  .files-section { padding: 60px 0; }
+  /* SEÇÃO DE ARQUIVOS */
+  .files-section {
+    padding: 60px 0;
+  }
 
   .section-head {
     display: flex;
@@ -344,9 +210,6 @@ $totalFiles = count($files);
 
   .file-list li {
     border-bottom: 1px solid var(--rule);
-    opacity: 0;
-    transform: translateX(-12px);
-    animation: revealRight 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 
   .file-list li:first-child {
@@ -355,7 +218,7 @@ $totalFiles = count($files);
 
   .file-list a {
     display: grid;
-    grid-template-columns: 60px 1fr auto auto auto;
+    grid-template-columns: 60px 1fr auto auto;
     align-items: center;
     gap: 24px;
     padding: 22px 8px;
@@ -381,7 +244,9 @@ $totalFiles = count($files);
     padding-left: 24px;
   }
 
-  .file-list a:hover::before { width: 3px; }
+  .file-list a:hover::before {
+    width: 3px;
+  }
 
   .file-num {
     font-family: 'JetBrains Mono', monospace;
@@ -409,13 +274,6 @@ $totalFiles = count($files);
     letter-spacing: 0.02em;
   }
 
-  .file-size {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--ink-mute);
-    letter-spacing: 0.05em;
-  }
-
   .file-type {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.68rem;
@@ -428,11 +286,11 @@ $totalFiles = count($files);
     background: var(--bg-paper);
   }
 
-  .file-type[data-type="pdf"]  { color: var(--accent); border-color: var(--accent); }
+  .file-type[data-type="pdf"] { color: var(--accent); border-color: var(--accent); }
   .file-type[data-type="docx"] { color: #2c5282; border-color: #b8c8dc; }
   .file-type[data-type="html"] { color: #6b46c1; border-color: #d4c5e8; }
-  .file-type[data-type="tex"]  { color: #2d6a4f; border-color: #b8d4c2; }
-  .file-type[data-type="md"]   { color: var(--ink-soft); }
+  .file-type[data-type="tex"] { color: #2d6a4f; border-color: #b8d4c2; }
+  .file-type[data-type="md"] { color: var(--ink-soft); }
 
   .open-arrow {
     font-family: 'JetBrains Mono', monospace;
@@ -442,15 +300,8 @@ $totalFiles = count($files);
     transition: transform 0.3s ease;
   }
 
-  .file-list a:hover .open-arrow { transform: translateX(6px); }
-
-  .empty {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: var(--ink-mute);
-    padding: 40px 0;
-    text-align: center;
-    font-size: 1.2rem;
+  .file-list a:hover .open-arrow {
+    transform: translateX(6px);
   }
 
   /* FOOTER */
@@ -501,7 +352,7 @@ $totalFiles = count($files);
     border-color: var(--accent);
   }
 
-  /* Animações */
+  /* ANIMAÇÕES DE ENTRADA */
   .reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -513,6 +364,25 @@ $totalFiles = count($files);
   .reveal-3 { animation-delay: 0.32s; }
   .reveal-4 { animation-delay: 0.48s; }
 
+  .file-list li {
+    opacity: 0;
+    transform: translateX(-12px);
+    animation: revealRight 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  .file-list li:nth-child(1) { animation-delay: 0.55s; }
+  .file-list li:nth-child(2) { animation-delay: 0.62s; }
+  .file-list li:nth-child(3) { animation-delay: 0.69s; }
+  .file-list li:nth-child(4) { animation-delay: 0.76s; }
+  .file-list li:nth-child(5) { animation-delay: 0.83s; }
+  .file-list li:nth-child(6) { animation-delay: 0.90s; }
+  .file-list li:nth-child(7) { animation-delay: 0.97s; }
+  .file-list li:nth-child(8) { animation-delay: 1.04s; }
+  .file-list li:nth-child(9) { animation-delay: 1.11s; }
+  .file-list li:nth-child(10) { animation-delay: 1.18s; }
+  .file-list li:nth-child(11) { animation-delay: 1.25s; }
+  .file-list li:nth-child(12) { animation-delay: 1.32s; }
+
   @keyframes revealUp {
     to { opacity: 1; transform: translateY(0); }
   }
@@ -521,19 +391,15 @@ $totalFiles = count($files);
     to { opacity: 1; transform: translateX(0); }
   }
 
-  /* Responsivo */
+  /* RESPONSIVO */
   @media (max-width: 768px) {
     .wrapper { padding: 0 24px; }
     header { padding: 50px 0 40px; }
     .header-grid { grid-template-columns: 1fr; }
     .header-meta { text-align: left; }
     .intro { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
-    .file-list a {
-      grid-template-columns: 40px 1fr auto;
-      gap: 14px;
-      padding: 18px 6px;
-    }
-    .file-type, .file-size { display: none; }
+    .file-list a { grid-template-columns: 40px 1fr auto; gap: 14px; padding: 18px 6px; }
+    .file-type { display: none; }
     .file-name { font-size: 1.1rem; }
     footer { grid-template-columns: 1fr; }
     .copyright { text-align: left; }
@@ -547,13 +413,13 @@ $totalFiles = count($files);
   <header>
     <div class="header-grid">
       <div>
-        <div class="eyebrow reveal reveal-1">Repositório de pesquisa · <?= $currentYear ?></div>
-        <h1 class="reveal reveal-2"><?= htmlspecialchars($projectName) ?></h1>
-        <p class="subtitle reveal reveal-3"><?= htmlspecialchars($projectSubtitle) ?></p>
+        <div class="eyebrow reveal reveal-1">Repositório de pesquisa · 2026</div>
+        <h1 class="reveal reveal-2">Produção de <em>Doutorado</em></h1>
+        <p class="subtitle reveal reveal-3">Estudos em Ciências da Religião, musicoterapia e metamaterial sonoro-fotônico.</p>
       </div>
       <div class="header-meta reveal reveal-3">
-        <div><strong>Autor</strong> · <?= htmlspecialchars($projectAuthor) ?></div>
-        <div><strong>Instituição</strong> · <?= htmlspecialchars($projectInstitution) ?></div>
+        <div><strong>Autor</strong> · Eduardo de Souza</div>
+        <div><strong>Instituição</strong> · UFMG</div>
         <div><strong>Versão</strong> · main</div>
       </div>
     </div>
@@ -569,45 +435,105 @@ $totalFiles = count($files);
   <section class="files-section">
     <div class="section-head">
       <h2>Arquivos do projeto</h2>
-      <span class="count"><?= $totalFiles ?> documento<?= $totalFiles === 1 ? '' : 's' ?></span>
+      <span class="count">12 documentos</span>
     </div>
 
-    <?php if (!empty($files)): ?>
-      <ul class="file-list">
-        <?php foreach ($files as $i => $file):
-          [$title, $sub] = prettyTitle($file['name']);
-          $typeLabel = fileTypeLabel($file['ext']);
-          $typeColor = fileTypeColor($file['ext']);
-          $delay     = 0.55 + ($i * 0.07);
-        ?>
-          <li style="animation-delay: <?= number_format($delay, 2) ?>s;">
-            <a href="<?= rawurlencode($file['name']) ?>" target="_blank" rel="noopener noreferrer">
-              <span class="file-num"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></span>
-              <span class="file-name">
-                <?= htmlspecialchars($title) ?>
-                <?php if (!empty($sub)): ?>
-                  <em><?= htmlspecialchars($sub) ?></em>
-                <?php endif; ?>
-              </span>
-              <span class="file-size"><?= humanSize($file['size']) ?></span>
-              <span class="file-type" data-type="<?= htmlspecialchars($typeColor) ?>"><?= htmlspecialchars($typeLabel) ?></span>
-              <span class="open-arrow">abrir →</span>
-            </a>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    <?php else: ?>
-      <p class="empty">Nenhum arquivo encontrado na pasta do projeto.</p>
-    <?php endif; ?>
+    <ul class="file-list">
+
+      <li><a href="PreProjeto_Doutorado_Ciencias_Religiao_Eduardo.docx">
+        <span class="file-num">01</span>
+        <span class="file-name">Pré-projeto de Doutorado<em>Ciências da Religião — versão integral</em></span>
+        <span class="file-type" data-type="docx">docx</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="preprojeto-doutorado.html">
+        <span class="file-num">02</span>
+        <span class="file-name">Pré-projeto · versão web<em>leitura em navegador</em></span>
+        <span class="file-type" data-type="html">html</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="Catalogacao_Atualizada_e_Resumo_Eduardo_de_Souza.docx">
+        <span class="file-num">03</span>
+        <span class="file-name">Catalogação atualizada e resumo<em>panorama da produção acadêmica</em></span>
+        <span class="file-type" data-type="docx">docx</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="Ensaio_Final_Eduardo_de_Souza.docx">
+        <span class="file-num">04</span>
+        <span class="file-name">Ensaio final<em>texto de fechamento</em></span>
+        <span class="file-type" data-type="docx">docx</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="artigo-davi-musicoterapia.pdf">
+        <span class="file-num">05</span>
+        <span class="file-name">Davi e a musicoterapia · artigo<em>PDF para impressão e citação</em></span>
+        <span class="file-type" data-type="pdf">pdf</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="artigo-davi-musicoterapia.html">
+        <span class="file-num">06</span>
+        <span class="file-name">Davi e a musicoterapia · web<em>versão hipertextual</em></span>
+        <span class="file-type" data-type="html">html</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="artigo-davi-musicoterapia.tex">
+        <span class="file-num">07</span>
+        <span class="file-name">Davi e a musicoterapia · fonte LaTeX<em>código-fonte para recompilação</em></span>
+        <span class="file-type" data-type="tex">tex</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="artigo-invencao-melodica.pdf">
+        <span class="file-num">08</span>
+        <span class="file-name">Invenção melódica · artigo<em>PDF para impressão e citação</em></span>
+        <span class="file-type" data-type="pdf">pdf</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="artigo-invencao-melodica.html">
+        <span class="file-num">09</span>
+        <span class="file-name">Invenção melódica · web<em>versão hipertextual</em></span>
+        <span class="file-type" data-type="html">html</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="artigo-invencao-melodica.tex">
+        <span class="file-num">10</span>
+        <span class="file-name">Invenção melódica · fonte LaTeX<em>código-fonte para recompilação</em></span>
+        <span class="file-type" data-type="tex">tex</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="README.md">
+        <span class="file-num">11</span>
+        <span class="file-name">README<em>orientações do repositório</em></span>
+        <span class="file-type" data-type="md">md</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+      <li><a href="LICENSE">
+        <span class="file-num">12</span>
+        <span class="file-name">Licença<em>termos de uso</em></span>
+        <span class="file-type" data-type="md">txt</span>
+        <span class="open-arrow">abrir →</span>
+      </a></li>
+
+    </ul>
   </section>
 
   <footer>
     <p class="colofon">
-      Página composta em Cormorant Garamond e JetBrains Mono. Pesquisa em andamento — última atualização em <?= $currentMonth ?>.
+      Página composta em Cormorant Garamond e JetBrains Mono. Pesquisa em andamento — última atualização em maio de 2026.
     </p>
     <div class="copyright">
-      <div>© <?= $currentYear ?> · <?= htmlspecialchars($projectAuthor) ?></div>
-      <div><a href="mailto:<?= htmlspecialchars($projectEmail) ?>"><?= htmlspecialchars($projectEmail) ?></a></div>
+      <div>© 2026 · Eduardo de Souza</div>
+      <div><a href="https://github.com/" target="_blank" rel="noopener">github</a> · <a href="mailto:edueandreia@ufmg.br">edueandreia@ufmg.br</a></div>
     </div>
   </footer>
 
