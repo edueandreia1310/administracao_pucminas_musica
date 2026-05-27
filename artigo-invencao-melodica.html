@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Eduardo de Souza">
+<meta name="description" content="Artigo acadêmico sobre invenção melódica como atração da música natural, com leitura em três ciclos da harpa de Davi e diálogo com a filosofia da música. Por Eduardo de Souza, 2026.">
+<meta name="keywords" content="invenção melódica, paisagem sonora, educação musical, filosofia da música, harpa de Davi, Schopenhauer, Jankélévitch, Adorno, Scruton, Wisnik, Messiaen, Schafer, musicoterapia, Eduardo de Souza">
+<title>A invenção melódica como atração da música natural — Eduardo de Souza</title>
+<style>
+:root {
+  --texto: #1a1a1a;
+  --texto-suave: #555;
+  --destaque: #1F3A5F;
+  --destaque-claro: #2E5984;
+  --fundo: #fdfdfb;
+  --fundo-caixa: #f5f3ee;
+  --borda: #d8d4c8;
+  --max-largura: 760px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--texto);
+  background: var(--fundo);
+  padding: 2rem 1rem 4rem;
+}
+.container { max-width: var(--max-largura); margin: 0 auto; }
+header.capa {
+  text-align: center;
+  border-bottom: 1px solid var(--borda);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+.breadcrumb a { color: var(--destaque-claro); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+header.capa h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  color: var(--destaque);
+  margin: 1rem 0 0.4rem;
+  font-weight: bold;
+}
+.subtitulo {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--texto-suave);
+  margin-bottom: 1.5rem;
+}
+.autor {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+.credenciais {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin-top: 0.4rem;
+}
+.data {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-top: 1.2rem;
+}
+.bloco-resumo {
+  background: var(--fundo-caixa);
+  border-left: 4px solid var(--destaque-claro);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+.bloco-resumo h3 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--destaque);
+  margin-bottom: 0.6rem;
+}
+.bloco-resumo p {
+  font-size: 0.95rem;
+  text-indent: 0;
+  margin: 0;
+  text-align: justify;
+}
+.bloco-resumo .palavras-chave {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+.epigrafe {
+  margin: 2.5rem 2rem;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.epigrafe blockquote {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.epigrafe .atribuicao {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+.sumario {
+  background: var(--fundo-caixa);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0 3rem;
+  border-radius: 4px;
+}
+.sumario h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--destaque);
+  margin-bottom: 1rem;
+  border: 0;
+  padding: 0;
+}
+.sumario ol { list-style: none; counter-reset: secao; }
+.sumario ol li {
+  counter-increment: secao;
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--borda);
+}
+.sumario ol li:last-child { border-bottom: 0; }
+.sumario ol li::before {
+  content: counter(secao) ". ";
+  color: var(--destaque-claro);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.sumario a { color: var(--texto); text-decoration: none; }
+.sumario a:hover { color: var(--destaque); text-decoration: underline; }
+h2.secao {
+  font-size: 1.5rem;
+  color: var(--destaque);
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--destaque-claro);
+}
+h3.subsecao {
+  font-size: 1.18rem;
+  color: var(--destaque-claro);
+  margin: 2rem 0 1rem;
+}
+p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  text-indent: 2em;
+  hyphens: auto;
+}
+p.sem-recuo { text-indent: 0; }
+blockquote.citacao {
+  margin: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  background: var(--fundo-caixa);
+  border-left: 4px solid var(--destaque-claro);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-indent: 0;
+}
+ul.lista-itens {
+  margin: 1rem 0 1.5rem 2rem;
+  list-style: disc;
+}
+ul.lista-itens li { margin-bottom: 0.6rem; line-height: 1.65; }
+cite { font-style: italic; }
+.citacao-autor {
+  color: var(--destaque-claro);
+  font-weight: 600;
+}
+ol.referencias {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+ol.referencias li {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+ol.referencias li a {
+  color: var(--destaque-claro);
+  word-break: break-all;
+}
+footer.assinatura {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--borda);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+footer.assinatura .destaque-rodape {
+  color: var(--destaque);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.acoes-download {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.acoes-download a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--destaque);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: Georgia, serif;
+}
+.acoes-download a:hover { background: var(--destaque-claro); }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 1rem 0.75rem 3rem; }
+  header.capa h1 { font-size: 1.45rem; }
+  h2.secao { font-size: 1.25rem; }
+  blockquote.citacao, .epigrafe { margin: 1rem 0; }
+  p { text-indent: 1.5em; }
+}
+@media print {
+  body { font-size: 12pt; background: white; padding: 0; }
+  .sumario, .bloco-resumo { background: none; border: 1px solid #ccc; }
+  blockquote.citacao { background: none; border-left: 3px solid #555; }
+  .acoes-download, .breadcrumb { display: none; }
+  h2.secao { page-break-after: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="capa">
+  <div class="breadcrumb">
+    <a href="/">Início</a> &raquo; <a href="/pedagogia/">Pedagogia</a> &raquo; Artigo
+  </div>
+  <h1>A invenção melódica como atração da música natural</h1>
+  <p class="subtitulo">Três ciclos da harpa de Davi em diálogo com a filosofia da música</p>
+  <p class="autor">Eduardo de Souza</p>
+  <p class="credenciais">
+    Licenciado em Educação Artística com habilitação em Música — FAMOSP (2024)<br>
+    Mestre em Engenharia Elétrica — PUC Minas (2018)<br>
+    Professor da rede municipal de Contagem/MG
+  </p>
+  <p class="data">Maio de 2026</p>
+</header>
+
+<div class="acoes-download">
+  <a href="artigo-invencao-melodica.pdf" download>📄 Baixar PDF</a>
+  <a href="artigo-invencao-melodica.tex" download>📑 Baixar fonte LaTeX</a>
+</div>
+
+<section class="bloco-resumo">
+  <h3>Resumo</h3>
+  <p>O presente artigo propõe uma reflexão técnico-filosófica sobre a invenção melódica como dispositivo de atração da chamada <em>música natural</em> — conceito que recobre, neste estudo, três camadas articuladas: fenomenológica (paisagem sonora concreta), acústica (leis físicas que regem o som) e estrutural (padrões morfológicos espontâneos). A hipótese defendida é que a melodia inventada, quando construída com atenção a essas três camadas, deixa de operar como simples imitação e passa a funcionar como ressonador formal capaz de tornar audível, ao ouvinte, aquilo que no mundo já soa em estado latente. A fundamentação articula procedimentos técnicos da tradição composicional ocidental — série harmônica como princípio gerador, modos de transposição limitada à maneira de Messiaen, motivo bachiano como célula mimética, temporalidades expandidas em Cage e Schafer — com uma leitura em três ciclos da figura paradigmática de Davi: o ciclo da escuta (Davi pastor), o ciclo da invenção (Davi salmista) e o ciclo do cuidado (Davi tocando para Saul, em 1 Samuel 16). O artigo dialoga com cinco vozes da filosofia da música ocidental contemporânea: Schopenhauer, Jankélévitch, Adorno, Scruton e Wisnik.</p>
+  <p class="palavras-chave"><strong>Palavras-chave:</strong> invenção melódica; paisagem sonora; educação musical; filosofia da música; harpa de Davi; cuidado.</p>
+</section>
+
+<div class="epigrafe">
+  <blockquote>"Se a Arte não vem de dentro, não é arte: é expressão de circunstância."</blockquote>
+  <div class="atribuicao">— Ronaldo Cupertino da Silva, artista plástico<br>(comunicação pessoal ao autor, com autorização formal)</div>
+</div>
+
+<div class="sumario">
+  <h2>Sumário</h2>
+  <ol>
+    <li><a href="#s1">Introdução</a></li>
+    <li><a href="#s2">Revisão bibliográfica</a></li>
+    <li><a href="#s3">A invenção como forma e como gesto</a></li>
+    <li><a href="#s4">A música natural: definições e camadas</a></li>
+    <li><a href="#s5">Procedimentos técnicos para uma melodia que atrai o natural</a></li>
+    <li><a href="#s6">A escuta como ato compositivo primário</a></li>
+    <li><a href="#s7">Aplicação na educação musical básica</a></li>
+    <li><a href="#s8">A harpa de Davi em três ciclos</a></li>
+    <li><a href="#s9">Diálogo com a tradição filosófica sobre música</a></li>
+    <li><a href="#s10">Exemplos paradigmáticos</a></li>
+    <li><a href="#s11">Considerações finais</a></li>
+    <li><a href="#refs">Referências</a></li>
+  </ol>
+</div>
+
+<h2 class="secao" id="s1">1. Introdução</h2>
+<p>Há, na história da música ocidental, uma tensão fecunda entre a invenção — entendida como artifício compositivo, gesto deliberado do sujeito criador — e aquilo que se costuma chamar de <em>música natural</em>: a soma de fenômenos sonoros que ocorrem independentemente da intenção humana, sejam eles os cantos dos pássaros, o ruído das águas, o sopro dos ventos ou a ressonância modal dos corpos vibrantes. O presente artigo examina como a melodia inventada pode funcionar não apenas como representação mimética dessa música natural, mas, mais profundamente, como dispositivo de <em>atração</em>: estrutura sonora capaz de chamar à audição o que, no mundo, já soa em estado latente.</p>
+<p>A hipótese de trabalho é a seguinte: a melodia inventada, quando construída com atenção aos princípios acústicos e morfológicos do som natural, deixa de ser simples imitação e passa a operar como ressonador formal — espaço onde a paisagem sonora encontra condições para se manifestar musicalmente. Essa hipótese encontra ressonância imediata na frase tomada como epígrafe deste artigo: se a arte vem de dentro, então o que ela atrai é precisamente aquilo que reconhece, do lado de fora, o eco do que já estava no interior.</p>
+<p>O texto articula-se em torno de três conceitos centrais — escuta, invenção e cuidado — e propõe que sua articulação seja lida como reatualização de um paradigma musical que a tradição cristã encontrou na figura de Davi: pastor que escuta, salmista que inventa, intérprete que cura.</p>
+
+<h2 class="secao" id="s2">2. Revisão bibliográfica</h2>
+<p>A reflexão proposta articula quatro campos disciplinares que vêm sendo desenvolvidos, ao longo do século XX e início do XXI, com produção bibliográfica significativa. Esta seção apresenta os principais trabalhos mobilizados, organizados por eixo temático, com indicação das contribuições específicas que cada autor oferece ao argumento aqui desenvolvido.</p>
+
+<h3 class="subsecao">2.1. Eixo 1: Tradição composicional ocidental e teoria da invenção</h3>
+<p>A noção técnica de <em>invenção</em> como forma musical breve e contrapontística remonta às <em>Invenções a duas e três vozes</em> (BWV 772-801) de Johann Sebastian <span class="citacao-autor">Bach (1723)</span>, cuja influência sobre a tradição composicional ocidental constitui referência incontornável para qualquer discussão da matéria. A noção retórica anterior, herdada da <em>inventio</em> clássica, encontra desdobramento contemporâneo nos trabalhos de Olivier Messiaen, particularmente em seu <em>Tratado de Ritmo, de Cor e de Ornitologia</em> <span class="citacao-autor">(Messiaen, 1994)</span>, obra monumental em sete volumes que sistematiza tanto seus modos de transposição limitada quanto sua prática de transcrição ornitológica. Gérard Grisey, em seus <em>Écrits</em> <span class="citacao-autor">(Grisey, 2008)</span>, oferece formulação rigorosa da estética espectral, que serve de ponte entre a tradição modal messiaênica e os procedimentos contemporâneos de derivação melódica a partir da série harmônica.</p>
+
+<h3 class="subsecao">2.2. Eixo 2: Paisagem sonora e ecomusicologia</h3>
+<p>O conceito de <em>paisagem sonora</em> (<em>soundscape</em>) foi cunhado e desenvolvido por R. Murray Schafer em duas obras complementares: <em>The Soundscape: Our Sonic Environment and the Tuning of the World</em> <span class="citacao-autor">(Schafer, 1994)</span>, que estabelece o quadro teórico geral, e <em>O Ouvido Pensante</em> <span class="citacao-autor">(Schafer, 1991)</span>, traduzido para o português brasileiro com prefácio de Marisa Trench de Oliveira Fonterrada, que desdobra implicações pedagógicas do conceito. A noção de <em>acustemologia</em> desenvolvida por Steven Feld em <em>Sound and Sentiment</em> <span class="citacao-autor">(Feld, 1982)</span>, a partir de etnografia entre os Kaluli da Papua-Nova Guiné, oferece base antropológica para pensar a escuta como modo de conhecimento. No contexto brasileiro, <span class="citacao-autor">Fonterrada (2008)</span>, em <em>De Tramas e Fios</em>, articula a tradição schaferiana com a pedagogia musical brasileira, fornecendo ponto de partida para a apropriação contextualizada dessas noções na educação básica nacional.</p>
+<p>A obra-síntese para a articulação som-música-sentido em chave brasileira é <em>O Som e o Sentido</em>, de <span class="citacao-autor">Wisnik (1989)</span>, cuja teoria das três dimensões físicas do som (ruído, pulso, altura) cruzadas com três dimensões formais da música constitui ferramenta analítica de poder considerável e ainda subexplorado pela literatura.</p>
+
+<h3 class="subsecao">2.3. Eixo 3: Tradição musical cristã e exegese da Harpa de Davi</h3>
+<p>A figura de Davi como músico paradigmático tem, como fonte primária, o relato bíblico de 1 Samuel 16 e o conjunto dos Salmos <span class="citacao-autor">(Bíblia, 1993)</span>. A recepção dessa figura ao longo da tradição teológica é vasta, indo dos comentários patrísticos de Agostinho aos estudos contemporâneos sobre teologia da música. Para os propósitos deste artigo, mobiliza-se a tradição musicoterapêutica que toma Davi como paradigma fundador, sintetizada por Kenneth Bruscia em <em>Definindo Musicoterapia</em> <span class="citacao-autor">(Bruscia, 2000)</span>, obra de referência para o campo profissional no Brasil.</p>
+
+<h3 class="subsecao">2.4. Eixo 4: Filosofia da música ocidental contemporânea</h3>
+<p>A reflexão filosófica sobre música mobilizada neste artigo articula cinco vozes principais. <span class="citacao-autor">Schopenhauer (2005)</span>, em <em>O Mundo como Vontade e Representação</em>, oferece o estatuto metafísico clássico da música como expressão direta da Vontade. <span class="citacao-autor">Jankélévitch (1983)</span>, em <em>La Musique et l'Ineffable</em>, desenvolve a tese da música como registro do inefável. <span class="citacao-autor">Adorno (2018)</span>, em <em>Filosofia da Nova Música</em>, introduz o conceito de <em>conteúdo de verdade</em> (<em>Wahrheitsgehalt</em>) que se realiza no enfrentamento histórico entre forma e material. <span class="citacao-autor">Scruton (1997)</span>, em <em>The Aesthetics of Music</em>, desenvolve a noção de <em>intencionalidade musical</em> como ato distinto da escuta de mero som. A esses se soma John Cage, particularmente em <em>Silence: Lectures and Writings</em> <span class="citacao-autor">(Cage, 1961)</span>, cuja meditação sobre silêncio e duração informa o tratamento do tempo musical aqui proposto.</p>
+
+<h3 class="subsecao">2.5. Síntese da revisão e lacuna identificada</h3>
+<p>A revisão dos quatro eixos permite identificar uma lacuna específica que este artigo se propõe a explorar: embora a literatura sobre paisagem sonora (Eixo 2) e sobre composição espectral (Eixo 1) discuta extensivamente as relações entre música e mundo natural, e embora a literatura sobre filosofia da música (Eixo 4) trate da relação entre música e interioridade do sujeito, a articulação dessas duas dimensões mediada pela figura paradigmática de Davi (Eixo 3) e operacionalizada em prática pedagógica concreta para a educação básica brasileira constitui território ainda pouco explorado. É nesse cruzamento que o presente artigo busca contribuir.</p>
+
+<h2 class="secao" id="s3">3. A invenção como forma e como gesto</h2>
+<p>O termo <em>invenção</em> carrega, na tradição musical, ao menos dois sentidos complementares. No primeiro, mais técnico, refere-se a uma forma breve, monotemática, fundada na exploração contrapontística de um motivo curto — modelo cristalizado em <span class="citacao-autor">Bach (1723)</span>. No segundo sentido, herdado da retórica clássica, <em>inventio</em> designa a etapa inicial do processo criativo: a descoberta dos lugares-comuns, das ideias matriciais a partir das quais o discurso se desdobra. Aplicada à melodia, a invenção retórica é menos um produto que um achado — algo que se encontra, mais do que se fabrica.</p>
+<p>Esses dois sentidos convergem: ambos pressupõem uma matéria mínima, um germe que contém em potência o desdobramento da peça. É justamente nessa exigência de concentração motívica que a invenção se aproxima da economia formal observável nos sons da natureza.</p>
+
+<h2 class="secao" id="s4">4. A música natural: definições e camadas</h2>
+<p><em>Música natural</em> recobre, neste artigo, três camadas distintas e articuladas. A <strong>camada fenomenológica</strong> refere-se ao som tal como se apresenta no mundo, antes de qualquer codificação musical — objeto privilegiado dos estudos schaferianos sobre paisagem sonora <span class="citacao-autor">(Schafer, 1994)</span>. A <strong>camada acústica</strong> compreende as leis físicas que regem a produção e propagação do som. A <strong>camada estrutural</strong> reúne os padrões morfológicos que emergem espontaneamente nos fenômenos naturais.</p>
+<p>Esses três planos articulam-se. Compor sob a influência da música natural significa atuar sobre essas três camadas simultaneamente <span class="citacao-autor">(Wisnik, 1989)</span>.</p>
+
+<h2 class="secao" id="s5">5. Procedimentos técnicos para uma melodia que atrai o natural</h2>
+<h3 class="subsecao">5.1. A série harmônica como princípio gerador</h3>
+<p>Toda nota produzida por um corpo vibrante traz consigo uma constelação de parciais ordenados segundo razões inteiras de frequência. A série harmônica é, nesse sentido, a primeira escala da natureza. <span class="citacao-autor">Grisey (2008)</span> oferece a formulação mais rigorosa do princípio em chave composicional contemporânea.</p>
+<h3 class="subsecao">5.2. Modos de transposição limitada</h3>
+<p><span class="citacao-autor">Messiaen (1994)</span> sistematizou os modos de transposição limitada — coleções de alturas cuja simetria interna restringe o número de transposições possíveis. Esses modos funcionam como filtros: estruturas inventadas que criam um ambiente harmônico em que a transcrição ornitológica encontra coerência interna.</p>
+<h3 class="subsecao">5.3. O motivo como célula mimética</h3>
+<p>Quando o compositor deriva o motivo de uma escuta atenta, instaura-se uma cadeia mimética que se desdobra por procedimentos contrapontísticos clássicos: inversão, retrógrado, aumentação, diminuição.</p>
+<h3 class="subsecao">5.4. Tempo musical e tempo da paisagem</h3>
+<p>A música natural opera em escalas temporais distintas das que predominam na escritura ocidental tradicional. Uma invenção que pretenda atrair o natural precisa flexibilizar a quadratura métrica <span class="citacao-autor">(Cage, 1961)</span>.</p>
+
+<h2 class="secao" id="s6">6. A escuta como ato compositivo primário</h2>
+<p>Nada do que foi exposto se sustenta sem uma prática anterior à escrita: a escuta. <span class="citacao-autor">Schafer (1991)</span> propõe que o compositor contemporâneo deve, antes de tudo, educar o próprio ouvido para o mundo. Ouvir torna-se ato compositivo no momento em que se decide o que selecionar, o que destacar, o que reconhecer como musical em meio ao continuum acústico do ambiente. A melodia atrai o natural na medida em que foi, antes, atraída por ele.</p>
+
+<h2 class="secao" id="s7">7. Aplicação na educação musical básica</h2>
+<p>Como professor de música atuante na rede municipal de Contagem, Minas Gerais, o autor tem explorado três tipos de exercício na sala de aula da educação básica brasileira, em diálogo direto com a tradição schaferiana mediada por <span class="citacao-autor">Fonterrada (2008)</span>.</p>
+<h3 class="subsecao">7.1. Cartografia sonora da escola</h3>
+<p>Percorrer os espaços da escola com a tarefa de escutar, sem julgar nem nomear. Cada estudante registra, em notação livre, três sons que mais lhe chamaram a atenção.</p>
+<h3 class="subsecao">7.2. Invenção sobre motivo encontrado</h3>
+<p>A partir da cartografia, cada estudante transcreve melodicamente um som registrado, e o desdobra por repetição, deslocamento de altura, inversão simples, expansão rítmica.</p>
+<h3 class="subsecao">7.3. Coro de paisagem</h3>
+<p>Em formação coletiva, grupos pequenos reproduzem vocalmente elementos da paisagem (vento, chuva, pássaro), organizados em sequência ou sobreposição.</p>
+<p>Em todos os três exercícios, a invenção do estudante não é manifestação de talento individual prévio, mas produto de uma escuta cuidadosa do mundo.</p>
+
+<h2 class="secao" id="s8">8. A harpa de Davi em três ciclos</h2>
+<p>O jovem pastor de Belém, descrito em 1 Samuel 16 <span class="citacao-autor">(Bíblia, 1993)</span> como aquele cuja música acalmava o espírito atormentado do rei Saul, e a quem a tradição atribui os Salmos, tornou-se figura paradigmática do músico que toca a partir de uma interioridade em escuta de algo maior. Propõe-se aqui que essa figura seja lida em três ciclos distintos e complementares.</p>
+
+<h3 class="subsecao">8.1. Primeiro ciclo — A escuta: Davi pastor</h3>
+<p>Antes do palácio, antes da composição, Davi é pastor. A formação musical de Davi não começa em academia nem em mestre; começa nesse ouvido posto diariamente em escuta do mundo. O pastor que escuta é a condição de possibilidade do compositor que inventa.</p>
+<p>Como educador musical e estudante das relações entre música e cuidado humano, considero que a harpa de Davi foi a expressão máxima de algo que veio de dentro para expressar o sentimento natural — perfeito — do Poeta Supremo, que é Deus. Este primeiro ciclo aparece, em registro pedagógico contemporâneo, no exercício de cartografia sonora descrito na Seção 7.</p>
+
+<h3 class="subsecao">8.2. Segundo ciclo — A invenção: Davi salmista</h3>
+<p>Da escuta do pastor brota o salmista. Os Salmos <span class="citacao-autor">(Bíblia, 1993)</span> não são improvisos despreocupados — são construções formais cuidadosas, com paralelismos hebraicos rigorosos, refrões, estruturas estróficas. São <em>inventiones</em> no sentido pleno do termo. A invenção de Davi tem uma característica que a distingue: ela não inventa do nada, ela responde.</p>
+<p>De perspectiva pessoal, formada na dupla experiência da música como prática herdada e como objeto de reflexão acadêmica, a harpa de Davi parece a expressão máxima de algo que vem de dentro para encontrar o sentimento natural — perfeito — do Poeta Supremo, que é Deus.</p>
+
+<h3 class="subsecao">8.3. Terceiro ciclo — O cuidado: Davi e Saul</h3>
+<p>A passagem de 1 Samuel 16 <span class="citacao-autor">(Bíblia, 1993)</span> descreve Davi tocando harpa para Saul, e o espírito atormentado do rei se aquietando. É o paradigma fundador da musicoterapia ocidental <span class="citacao-autor">(Bruscia, 2000)</span>. O que torna a música de Davi capaz desse efeito é a continuidade com os dois ciclos anteriores: ela é música de alguém que primeiro escutou o mundo, depois aprendeu a responder em forma.</p>
+<p>Entre os exemplos da tradição em que música, escuta e cuidado se entrelaçam, nenhum é tão fundo quanto a harpa de Davi: nela vê-se a expressão máxima de algo que veio de dentro para alcançar o sentimento natural — perfeito — do Poeta Supremo, que é Deus.</p>
+
+<h3 class="subsecao">8.4. Síntese: os três ciclos como movimento único</h3>
+<p>Os três ciclos — escuta, invenção, cuidado — não são etapas separadas. São movimentos simultâneos e mutuamente sustentados de uma mesma prática musical integral. Davi pastoreia, compõe e cura ao mesmo tempo, porque a escuta sustenta a invenção, a invenção sustenta o cuidado, e o cuidado retroalimenta a escuta.</p>
+
+<h2 class="secao" id="s9">9. Diálogo com a tradição filosófica sobre música</h2>
+<h3 class="subsecao">9.1. Schopenhauer e a Vontade</h3>
+<p>Em <em>O Mundo como Vontade e Representação</em>, <span class="citacao-autor">Schopenhauer (2005)</span> atribui à música um estatuto único: ela expressa diretamente a Vontade metafísica, sem mediação de conceito. Essa tese ressoa, em chave secular, com a frase de Ronaldo Cupertino.</p>
+<h3 class="subsecao">9.2. Jankélévitch e o inefável musical</h3>
+<p><span class="citacao-autor">Jankélévitch (1983)</span> recusa qualquer redução da música ao conceito. A atração da música natural opera no registro do inefável.</p>
+<h3 class="subsecao">9.3. Adorno e o conteúdo de verdade</h3>
+<p><span class="citacao-autor">Adorno (2018)</span> sustenta que a música possui <em>Wahrheitsgehalt</em> que se realiza no enfrentamento histórico entre forma e material. Atrair o natural significa atrair sem maquiagem o estado atual dessa naturalidade.</p>
+<h3 class="subsecao">9.4. Scruton e a intencionalidade musical</h3>
+<p><span class="citacao-autor">Scruton (1997)</span> defende que ouvir música é ato intencional distinto de ouvir mero som.</p>
+<h3 class="subsecao">9.5. Wisnik e o sentido do som</h3>
+<p><span class="citacao-autor">Wisnik (1989)</span> articula as três dimensões físicas do som — ruído, pulso, altura — com as três dimensões formais da música.</p>
+
+<h2 class="secao" id="s10">10. Exemplos paradigmáticos</h2>
+<ul class="lista-itens">
+  <li>Olivier Messiaen, <em>Catalogue d'Oiseaux</em> (1956–1958).</li>
+  <li>Heitor Villa-Lobos, <em>Bachianas Brasileiras</em> nº 4, Prelúdio.</li>
+  <li>Toru Takemitsu, <em>From me flows what you call Time</em>.</li>
+  <li>Gérard Grisey, <em>Partiels</em>.</li>
+  <li>R. Murray Schafer, <em>Music for Wilderness Lake</em>.</li>
+</ul>
+
+<h2 class="secao" id="s11">11. Considerações finais</h2>
+<p>Defender que a melodia inventada possa atrair a música natural não significa apagar a fronteira entre arte e mundo, nem reduzir a composição a um exercício mimético. Significa reconhecer que a invenção mais radical é a que se constrói com plena consciência das estruturas que regem o som no mundo.</p>
+<p>Aplicada à educação musical, essa concepção desloca o eixo da prática: o aluno passa a ser pensado como sujeito que aprende, primeiro, a escutar o mundo — e só depois, a inventar. Aplicada à dimensão de cuidado, aponta para uma prática em que o músico opera como Davi: por atenção, não por imposição.</p>
+<p>Fecho com a frase de Ronaldo Cupertino:</p>
+<blockquote class="citacao">Se a Arte não vem de dentro, não é arte: é expressão de circunstância.</blockquote>
+<p>A tarefa do artista, do educador e do músico é a mesma: oferecer ao outro aquilo que vem de dentro, com integridade, sem se deixar reduzir à circunstância.</p>
+
+<h2 class="secao" id="refs">Referências</h2>
+<ol class="referencias">
+  <li>ADORNO, T. W. <em>Filosofia da nova música</em>. Trad. M. Bandeira. São Paulo: Perspectiva, 2018.</li>
+  <li>BACH, J. S. <em>Inventionen und Sinfonien</em>, BWV 772–801. Edição de Köthen, 1723. Edição moderna: Bärenreiter, Kassel.</li>
+  <li>BÍBLIA SAGRADA. <em>Almeida Revista e Atualizada</em>. Barueri: Sociedade Bíblica do Brasil, 1993. Particularmente: 1 Samuel 16; Livro dos Salmos.</li>
+  <li>BRUSCIA, K. E. <em>Definindo musicoterapia</em>. Trad. M. Ronchini. Rio de Janeiro: Enelivros, 2000.</li>
+  <li>CAGE, J. <em>Silence: Lectures and Writings</em>. Middletown: Wesleyan University Press, 1961.</li>
+  <li>FELD, S. <em>Sound and Sentiment: Birds, Weeping, Poetics, and Song in Kaluli Expression</em>. Philadelphia: University of Pennsylvania Press, 1982.</li>
+  <li>FONTERRADA, M. T. de O. <em>De tramas e fios: um ensaio sobre música e educação</em>. São Paulo: Editora UNESP, 2008.</li>
+  <li>GRISEY, G. <em>Écrits ou l'invention de la musique spectrale</em>. Paris: MF, 2008.</li>
+  <li>JANKÉLÉVITCH, V. <em>La musique et l'ineffable</em>. Paris: Seuil, 1983.</li>
+  <li>MESSIAEN, O. <em>Traité de rythme, de couleur et d'ornithologie</em>. Paris: Alphonse Leduc, 1994–2002. 7 v.</li>
+  <li>SCHAFER, R. M. <em>O ouvido pensante</em>. Trad. M. T. Fonterrada et al. São Paulo: Editora UNESP, 1991.</li>
+  <li>SCHAFER, R. M. <em>The Soundscape: Our Sonic Environment and the Tuning of the World</em>. Rochester: Destiny Books, 1994.</li>
+  <li>SCHOPENHAUER, A. <em>O mundo como vontade e representação</em>. Trad. J. Barboza. São Paulo: Unesp, 2005.</li>
+  <li>SCRUTON, R. <em>The Aesthetics of Music</em>. Oxford: Oxford University Press, 1997.</li>
+  <li>SILVA, R. C. da. Comunicação pessoal ao autor. [s.d.]. Citada nesta obra mediante autorização formal do citado.</li>
+  <li>SOUZA, E. de. <em>Projeto Ótimo de uma Antena Patch com Metamaterial</em>. 2018. 79 f. Dissertação (Mestrado em Engenharia Elétrica) — Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, 2018. Orientadora: Rose Mary de Souza Batalha. Disponível em: <a href="https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf">https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf</a>.</li>
+  <li>WISNIK, J. M. <em>O som e o sentido: uma outra história das músicas</em>. São Paulo: Companhia das Letras, 1989.</li>
+</ol>
+
+<footer class="assinatura">
+  <p class="destaque-rodape">Eduardo de Souza</p>
+  <p>Mestre em Engenharia Elétrica (PUC Minas, 2018) · Licenciado em Música (FAMOSP, 2024)<br>
+  Professor da rede municipal de Contagem/MG · Contagem, Minas Gerais, Brasil<br>
+  Artigo autoral · Publicado em eaqvd.com/pedagogia/ · Maio de 2026</p>
+</footer>
+
+</div>
+</body>
+</html>

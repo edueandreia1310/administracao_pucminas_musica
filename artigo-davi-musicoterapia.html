@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Eduardo de Souza">
+<meta name="description" content="A figura de Davi na tradição musicoterapêutica ocidental — leitura em três ciclos articulada com filosofia da música contemporânea e aplicação pedagógica na educação básica brasileira. Por Eduardo de Souza, 2026.">
+<meta name="keywords" content="Davi, musicoterapia, harpa, salmos, paisagem sonora, educação musical, filosofia da música, Bruscia, Schafer, Wisnik, Schopenhauer, Jankélévitch, Adorno, Scruton, Eduardo de Souza">
+<title>A figura de Davi na tradição musicoterapêutica — Eduardo de Souza</title>
+<style>
+:root {
+  --texto: #1a1a1a;
+  --texto-suave: #555;
+  --destaque: #1F3A5F;
+  --destaque-claro: #2E5984;
+  --fundo: #fdfdfb;
+  --fundo-caixa: #f5f3ee;
+  --borda: #d8d4c8;
+  --max-largura: 760px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--texto);
+  background: var(--fundo);
+  padding: 2rem 1rem 4rem;
+}
+.container { max-width: var(--max-largura); margin: 0 auto; }
+header.capa {
+  text-align: center;
+  border-bottom: 1px solid var(--borda);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+.breadcrumb a { color: var(--destaque-claro); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+header.capa h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  color: var(--destaque);
+  margin: 1rem 0 0.4rem;
+  font-weight: bold;
+}
+.subtitulo {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--texto-suave);
+  margin-bottom: 1.5rem;
+}
+.autor { font-size: 1.05rem; margin-top: 1.5rem; font-weight: bold; }
+.credenciais { font-size: 0.9rem; color: var(--texto-suave); line-height: 1.6; margin-top: 0.4rem; }
+.data { font-size: 0.9rem; color: var(--texto-suave); margin-top: 1.2rem; }
+.bloco-resumo {
+  background: var(--fundo-caixa);
+  border-left: 4px solid var(--destaque-claro);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+.bloco-resumo h3 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--destaque);
+  margin-bottom: 0.6rem;
+}
+.bloco-resumo p { font-size: 0.95rem; text-indent: 0; margin: 0 0 0.6rem 0; text-align: justify; }
+.bloco-resumo .palavras-chave { margin-top: 0.8rem; font-size: 0.9rem; }
+.epigrafe { margin: 2.5rem 2rem; text-align: right; font-size: 0.95rem; }
+.epigrafe blockquote { font-style: italic; margin-bottom: 0.5rem; border: none; padding: 0; background: none; }
+.epigrafe .atribuicao { font-size: 0.85rem; color: var(--texto-suave); }
+.sumario {
+  background: var(--fundo-caixa);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0 3rem;
+  border-radius: 4px;
+}
+.sumario h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--destaque);
+  margin-bottom: 1rem;
+  border: 0;
+  padding: 0;
+}
+.sumario ol { list-style: none; counter-reset: secao; }
+.sumario ol li {
+  counter-increment: secao;
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--borda);
+}
+.sumario ol li:last-child { border-bottom: 0; }
+.sumario ol li::before {
+  content: counter(secao) ". ";
+  color: var(--destaque-claro);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.sumario a { color: var(--texto); text-decoration: none; }
+.sumario a:hover { color: var(--destaque); text-decoration: underline; }
+h2.secao {
+  font-size: 1.5rem;
+  color: var(--destaque);
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--destaque-claro);
+}
+h3.subsecao {
+  font-size: 1.18rem;
+  color: var(--destaque-claro);
+  margin: 2rem 0 1rem;
+}
+h4.subsubsecao {
+  font-size: 1.05rem;
+  color: var(--destaque-claro);
+  margin: 1.5rem 0 0.8rem;
+  font-style: italic;
+}
+p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  text-indent: 2em;
+  hyphens: auto;
+}
+p.sem-recuo { text-indent: 0; }
+blockquote.citacao {
+  margin: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  background: var(--fundo-caixa);
+  border-left: 4px solid var(--destaque-claro);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-indent: 0;
+}
+ul.lista-itens { margin: 1rem 0 1.5rem 2rem; list-style: disc; }
+ul.lista-itens li { margin-bottom: 0.6rem; line-height: 1.65; }
+cite { font-style: italic; }
+.citacao-autor { color: var(--destaque-claro); font-weight: 600; }
+.hebraico {
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  direction: rtl;
+  display: inline-block;
+}
+.versiculo {
+  padding: 0.5rem 1rem;
+  background: var(--fundo-caixa);
+  border-left: 3px solid var(--destaque-claro);
+  margin: 1rem 2rem;
+  font-style: italic;
+  text-indent: 0;
+  font-size: 0.95rem;
+}
+ol.referencias { list-style: none; margin-top: 1.5rem; }
+ol.referencias li {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+ol.referencias li a { color: var(--destaque-claro); word-break: break-all; }
+footer.assinatura {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--borda);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+footer.assinatura .destaque-rodape { color: var(--destaque); font-weight: bold; margin-bottom: 0.5rem; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 1rem 0.75rem 3rem; }
+  header.capa h1 { font-size: 1.45rem; }
+  h2.secao { font-size: 1.25rem; }
+  blockquote.citacao, .epigrafe { margin: 1rem 0; }
+  p { text-indent: 1.5em; }
+}
+@media print {
+  body { font-size: 12pt; background: white; padding: 0; }
+  .sumario, .bloco-resumo { background: none; border: 1px solid #ccc; }
+  blockquote.citacao { background: none; border-left: 3px solid #555; }
+  .breadcrumb { display: none; }
+  h2.secao { page-break-after: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="capa">
+  <div class="breadcrumb">
+    <a href="/">Início</a> &raquo; <a href="/pedagogia/">Pedagogia</a> &raquo; Davi e a musicoterapia
+  </div>
+  <h1>A figura de Davi na tradição musicoterapêutica ocidental</h1>
+  <p class="subtitulo">Leitura em três ciclos articulada com a filosofia da música contemporânea<br>e aplicação pedagógica na educação básica brasileira</p>
+  <p class="autor">Eduardo de Souza</p>
+  <p class="credenciais">
+    Licenciado em Educação Artística com habilitação em Música — FAMOSP (2024)<br>
+    Mestre em Engenharia Elétrica — PUC Minas (2018)<br>
+    Professor da rede municipal de Contagem/MG
+  </p>
+  <p class="data">Maio de 2026</p>
+</header>
+
+<section class="bloco-resumo">
+  <h3>Resumo</h3>
+  <p>O presente artigo investiga a figura bíblica de Davi como paradigma fundador da tradição musicoterapêutica ocidental, propondo leitura sistemática em três ciclos articulados: o ciclo da escuta (Davi pastor das colinas de Belém), o ciclo da invenção (Davi salmista, autor formal dos Salmos canônicos) e o ciclo do cuidado (Davi tocando harpa para o rei Saul atormentado, conforme 1 Samuel 16). Os três ciclos são analisados em sua continuidade interna e em sua reatualização possível na educação musical básica brasileira contemporânea. A reflexão articula-se com cinco vozes da filosofia da música ocidental — Schopenhauer, Jankélévitch, Adorno, Scruton e Wisnik — e com a tradição musicoterapêutica institucionalizada por Bruscia, Benenzon e Schneider. O artigo propõe que a figura davídica, longe de constituir apenas referência simbólica retórica nos manuais clínicos da disciplina, oferece estrutura analítica operacional para pensar a relação entre escuta-mundo, invenção-forma e cuidado-comunidade na prática musical contemporânea, particularmente em contextos de educação musical pública.</p>
+  <p class="palavras-chave"><strong>Palavras-chave:</strong> Davi; harpa; salmos; musicoterapia; paisagem sonora; educação musical; filosofia da música; cuidado.</p>
+</section>
+
+<div class="epigrafe">
+  <blockquote>"Se a Arte não vem de dentro, não é arte: é expressão de circunstância."</blockquote>
+  <div class="atribuicao">— Ronaldo Cupertino da Silva, artista plástico<br>(comunicação pessoal ao autor, com autorização formal)</div>
+</div>
+
+<div class="sumario">
+  <h2>Sumário</h2>
+  <ol>
+    <li><a href="#s1">Introdução: por que retornar a Davi</a></li>
+    <li><a href="#s2">Revisão bibliográfica: quatro eixos teóricos</a></li>
+    <li><a href="#s3">Davi: contexto histórico e exegese do nome</a></li>
+    <li><a href="#s4">Primeiro ciclo — A escuta: Davi pastor</a></li>
+    <li><a href="#s5">Segundo ciclo — A invenção: Davi salmista</a></li>
+    <li><a href="#s6">Terceiro ciclo — O cuidado: Davi e Saul</a></li>
+    <li><a href="#s7">Síntese: os três ciclos como movimento único</a></li>
+    <li><a href="#s8">Recepção de Davi na tradição musicoterapêutica</a></li>
+    <li><a href="#s9">Diálogo com a filosofia da música contemporânea</a></li>
+    <li><a href="#s10">Aplicação na educação musical básica brasileira</a></li>
+    <li><a href="#s11">Considerações finais</a></li>
+    <li><a href="#refs">Referências</a></li>
+  </ol>
+</div>
+
+<h2 class="secao" id="s1">1. Introdução: por que retornar a Davi</h2>
+<p>A história da musicoterapia ocidental, em sua versão narrada pelos manuais introdutórios da disciplina, costuma abrir com a passagem de 1 Samuel 16, na qual o jovem Davi é convocado à corte do rei Saul para acalmar, por meio da harpa, o espírito perturbado do monarca. A passagem é citada com tal frequência que se tornou, na prática, lugar-comum disciplinar: Bruscia a menciona en passant em <span class="citacao-autor">Definindo Musicoterapia (2000)</span>, Benenzon a inclui em seu <em>Manual de Musicoterapia</em>, Schneider a referencia em sua síntese histórica do campo. A presença é unânime; o tratamento, contudo, é raso. Davi aparece como anedota fundadora, exemplo retórico para introduzir a disciplina ao leigo, raramente como objeto de análise sistemática que pudesse iluminar a estrutura conceitual da própria musicoterapia.</p>
+<p>O presente artigo propõe-se a corrigir essa lacuna em pequena escala, oferecendo leitura da figura davídica em três ciclos articulados (escuta, invenção, cuidado) e demonstrando que esses três ciclos, longe de constituírem distribuição arbitrária de momentos biográficos, organizam de modo coerente as três dimensões fundamentais da prática musical em registro terapêutico, pedagógico e artístico. A hipótese é que Davi não é apenas exemplo histórico, mas estrutura analítica.</p>
+<p>O retorno à figura davídica justifica-se por três razões. A primeira é histórica: trata-se da referência mais antiga e contínua da tradição musicoterapêutica ocidental, anterior aos diálogos pitagóricos sobre harmonia das esferas e à teoria dos modos éticos atribuída a Damon de Atenas e desenvolvida por Platão na <em>República</em>. A segunda é estrutural: a articulação entre escuta-mundo, invenção-forma e cuidado-comunidade que se observa na narrativa de Davi reaparece, sob diferentes vocabulários, em todas as principais escolas musicoterapêuticas contemporâneas, sugerindo que se trata de estrutura profunda da própria prática. A terceira é pedagógica: a reatualização desses três ciclos em escala adequada à educação musical básica oferece caminho concreto para a formação de professores que articulem dimensão artística e dimensão de cuidado em sua prática docente.</p>
+<p>O artigo organiza-se em onze seções. A Seção 2 apresenta a revisão bibliográfica que situa o trabalho em quatro campos disciplinares. A Seção 3 oferece breve contextualização histórica e exegese filológica do nome <span class="hebraico">דָּוִד</span> (David). As Seções 4 a 6 desenvolvem cada um dos três ciclos. A Seção 7 articula os três ciclos em síntese teórica. A Seção 8 reconstrói a recepção da figura davídica na tradição musicoterapêutica institucionalizada. A Seção 9 dialoga com a filosofia da música contemporânea. A Seção 10 apresenta três aplicações pedagógicas testadas em sala de aula da educação básica em Contagem, Minas Gerais. A Seção 11 oferece considerações finais e indicações de pesquisa futura.</p>
+
+<h2 class="secao" id="s2">2. Revisão bibliográfica: quatro eixos teóricos</h2>
+<p>Este trabalho mobiliza quatro corpos literários distintos, cada um com tradição acadêmica robusta no Brasil e internacionalmente. A revisão aqui apresentada é seletiva, focando os autores efetivamente operados ao longo do artigo.</p>
+
+<h3 class="subsecao">2.1. Tradição musicoterapêutica</h3>
+<p>O campo da musicoterapia foi sistematizado academicamente na segunda metade do século XX, com produção bibliográfica que combina dimensão clínica, teórica e histórica. <span class="citacao-autor">Bruscia (2000)</span>, em <em>Definindo Musicoterapia</em>, oferece síntese institucional do campo, com proposta de definição operacional que se tornou referência internacional. Rolando Benenzon, em sua produção argentina, desenvolveu o conceito de <em>identidade sonora</em> (ISO) que estrutura abordagem clínica largamente adotada na América Latina. Mary Schneider produziu síntese histórica da disciplina, traçando linhagem que conecta práticas pitagóricas, paradigma davídico e formulações contemporâneas.</p>
+
+<h3 class="subsecao">2.2. Estudos bíblicos e exegese de 1 Samuel</h3>
+<p>A literatura crítica sobre os livros de Samuel é vasta e altamente especializada. Para os propósitos deste artigo, mobiliza-se principalmente <span class="citacao-autor">a Bíblia Sagrada (Almeida Revista e Atualizada, 1993)</span> como texto-fonte, com atenção especial a 1 Samuel 16 (passagem de Davi e Saul) e ao Livro dos Salmos. A exegese histórico-crítica do material é apoiada pelas introduções clássicas aos estudos do Antigo Testamento, com atenção à datação provável do Reino unificado (séc. X a.C.) e à formação do saltério canônico (entre o séc. X a.C. e o exílio babilônico).</p>
+
+<h3 class="subsecao">2.3. Paisagem sonora e ecomusicologia</h3>
+<p>O conceito de <em>paisagem sonora</em> (<em>soundscape</em>), desenvolvido por R. Murray <span class="citacao-autor">Schafer (1994, 1991)</span>, fornece o aparato analítico para pensar a relação entre Davi pastor e seu ambiente acústico. A noção de <em>acustemologia</em> de Steven <span class="citacao-autor">Feld (1982)</span> oferece base antropológica complementar. No contexto brasileiro, <span class="citacao-autor">Fonterrada (2008)</span> articula a tradição schaferiana com a pedagogia musical nacional, e <span class="citacao-autor">Wisnik (1989)</span> oferece, em <em>O Som e o Sentido</em>, a articulação som-pulso-altura que estrutura a análise musical aqui empreendida.</p>
+
+<h3 class="subsecao">2.4. Filosofia da música ocidental contemporânea</h3>
+<p>Cinco autores fornecem o quadro filosófico: <span class="citacao-autor">Schopenhauer (2005)</span>, com a tese da música como expressão direta da Vontade; <span class="citacao-autor">Jankélévitch (1983)</span>, com a noção de inefável musical; <span class="citacao-autor">Adorno (2018)</span>, com o conceito de conteúdo de verdade (<em>Wahrheitsgehalt</em>); <span class="citacao-autor">Scruton (1997)</span>, com a tese da intencionalidade musical; e o já citado Wisnik. A esses se soma John <span class="citacao-autor">Cage (1961)</span>, cuja meditação sobre silêncio informa o tratamento do tempo musical aqui proposto.</p>
+
+<h2 class="secao" id="s3">3. Davi: contexto histórico e exegese do nome</h2>
+<p>Antes de empreender a leitura em três ciclos, vale situar brevemente o personagem em seu contexto histórico e filológico, tomando o cuidado metodológico de distinguir entre a figura literária dos textos canônicos e o referente histórico subjacente — distinção sobre a qual a crítica bíblica contemporânea mantém debate ativo e que excede o escopo deste artigo.</p>
+
+<h3 class="subsecao">3.1. Contexto histórico do Reino unificado</h3>
+<p>Conforme reconstituição predominante na historiografia bíblica contemporânea, Davi teria reinado em Judá e depois sobre o Israel unificado em torno do século X a.C., sucedendo Saul e sendo sucedido por Salomão. O período é caracterizado pela transição entre a estrutura tribal das doze tribos de Israel, organizada em torno de juízes carismáticos, e o estabelecimento de uma monarquia centralizada com capital em Jerusalém. A figura de Davi, nessa transição, é simultaneamente militar, política e cultual — guerreiro, rei e organizador da liturgia musical do templo, conforme a tradição posterior preservada nas Crônicas.</p>
+<p>Para os propósitos deste artigo, importa menos a precisão da reconstrução histórica e mais a configuração da figura davídica tal como ela é apresentada pelos textos canônicos: pastor que se torna rei, músico que se torna comandante, jovem ungido que se torna fundador de linhagem dinástica. Essa configuração condensa, na economia de uma vida, os três ciclos que aqui se quer analisar.</p>
+
+<h3 class="subsecao">3.2. Exegese do nome <span class="hebraico">דָּוִד</span></h3>
+<p>O nome hebraico Davi (<span class="hebraico">דָּוִד</span>, transliterado <em>Dāwid</em> ou <em>Dāwīd</em>) é etimologicamente conectado à raiz <em>dwd</em>, que carrega o sentido nuclear de "amar", "ser amado" ou "amado". A literatura exegética discute se o nome significa "amado" (forma passiva, indicando o personagem como objeto de afeto divino) ou "amante" (forma ativa, indicando capacidade afetiva do personagem). A maior parte dos comentadores favorece a primeira interpretação, alinhando-se com a apresentação geral do personagem nos textos canônicos como aquele que recebe favor divino especial.</p>
+<p>A relevância dessa exegese para o presente artigo é a seguinte: a configuração afetiva inscrita no próprio nome do personagem ressoa com a dimensão de cuidado que se observa em sua atuação musical. Davi é o amado que ama, e essa duplicidade de polo afetivo organiza a relação tripartite que ele estabelece consigo, com Deus e com a comunidade humana — relação que se manifesta musicalmente nos três ciclos a serem analisados.</p>
+
+<h3 class="subsecao">3.3. Davi como personagem literário multifacetado</h3>
+<p>O Davi dos textos canônicos é personagem complexo, longe da idealização pia que algumas leituras devocionais sugerem. Os mesmos textos que registram sua capacidade musical e seu favor divino registram também adultério (caso de Betsabá em 2 Samuel 11), homicídio indireto (morte de Urias arranjada para encobrir o adultério), conflitos familiares severos (revolta de Absalão, em 2 Samuel 15-18) e oscilações de fé. Essa complexidade narrativa, longe de comprometer o uso do personagem como paradigma musicoterapêutico, na verdade o enriquece: o Davi musicoterapeuta não é figura idealizada, é homem real que articula música, fé e falibilidade em uma única vida.</p>
+<p>Para os fins desta análise, contudo, será privilegiado o Davi de 1 Samuel 16 a 2 Samuel 5 — o jovem pastor, o salmista, o músico que toca para Saul — antes da consolidação do reino e dos episódios mais ambíguos de sua biografia política. Essa delimitação não significa idealização, mas escolha metodológica de focar o material narrativo mais diretamente pertinente à reflexão musical aqui empreendida.</p>
+
+<h2 class="secao" id="s4">4. Primeiro ciclo — A escuta: Davi pastor</h2>
+
+<h3 class="subsecao">4.1. O lugar do pastoreio</h3>
+<p>Antes do palácio, antes da composição, antes do conflito com Saul, Davi é pastor. A tradição o apresenta menino no campo, sozinho com o rebanho do pai Jessé nas colinas de Belém. A passagem que se segue à unção por Samuel (1 Samuel 16:11-13) descreve precisamente esse cenário: quando o profeta pergunta se Jessé tem ainda outros filhos não apresentados, a resposta é que falta o mais novo, "que está apascentando as ovelhas". Antes de qualquer função pública, Davi é o pastor.</p>
+<p>Esse dado, aparentemente anedótico, é estruturalmente decisivo. A formação musical de Davi não começa em academia nem em mestre humano. Começa em horas e horas de exposição diária a uma paisagem sonora particular: o balido das ovelhas, o vento entre as oliveiras, o canto dos pássaros das colinas da Judeia, o silêncio espesso das noites do deserto. Esse ouvido posto diariamente em escuta do mundo é a primeira camada da formação musical do salmista que virá.</p>
+
+<h3 class="subsecao">4.2. A paisagem sonora das colinas de Belém</h3>
+<p>Vale a pena reconstituir, em alguma especulação informada, o que terá sido essa paisagem sonora. As colinas em torno de Belém, situadas a cerca de oito quilômetros ao sul de Jerusalém, apresentam topografia íngreme, vegetação esparsa, presença significativa de oliveiras e arbustos resistentes à seca. A fauna inclui, ainda hoje, espécies de aves canoras, pequenos mamíferos e — sazonalmente — ovelhas e cabras em rebanhos pastoreados. O clima oscila entre verões secos e invernos chuvosos, com noites frias mesmo no verão dado o altitude superior a 700 metros.</p>
+<p>O som dominante de uma jornada típica de pastoreio nessas colinas seria, provavelmente, o balido constante das ovelhas — som de frequência variável (de aproximadamente 150 Hz a 800 Hz, dependendo do animal), com padrão rítmico irregular mas reconhecível. Sobreposto a isso, o som do vento, com seu sussurro de frequências baixas e contínuas. Aves canoras pontuando o espectro médio-agudo. Esporadicamente, o latido de um cão pastor, o eco de uma voz humana distante. E, atravessando tudo, períodos prolongados de silêncio relativo, quebrado apenas por sons localizados.</p>
+<p>Essa paisagem sonora, sustentada por horas, dias, anos, constitui o que Schafer denominaria <em>keynote sound</em> — o som-tônica de fundo que estrutura toda a percepção auditiva do sujeito que nele habita. <span class="citacao-autor">Schafer (1994)</span> argumenta que o keynote sound, longe de ser apenas ambiente neutro, é constitutivo da estrutura cognitiva e afetiva do ouvinte: o pastor das colinas de Belém ouve o mundo de modo diferente do pescador da costa cananeia, e essa diferença auditiva se traduz em diferenças musicais quando esses sujeitos, mais tarde, fazem música.</p>
+
+<h3 class="subsecao">4.3. O pastor como ouvinte privilegiado</h3>
+<p>A condição de pastor confere a Davi posição auditiva privilegiada por três razões. Primeira, isolamento: longos períodos sozinho com o rebanho permitem grau de atenção auditiva que vida urbana ou comunitária densa raramente proporciona. Segunda, vigília: o pastoreio exige escuta ativa para detectar predadores, animais perdidos, mudanças climáticas — escuta de proteção que treina sensibilidade auditiva em níveis finos. Terceira, repetição: anos de exposição ao mesmo tipo de paisagem sonora permitem desenvolver familiaridade íntima com seus padrões, percebendo variações sutis que escapariam ao ouvinte ocasional.</p>
+<p>Essas três condições — isolamento, vigília, repetição — não são exclusivas da pastorícia, mas se encontram nela em combinação especialmente rica. É instrutivo observar que, na história da música ocidental, outras figuras de grande sensibilidade auditiva também passaram por períodos análogos: Beethoven em suas caminhadas solitárias pelos campos de Heiligenstadt, Mahler em suas estadias em casas de campo, Messiaen em suas longas excursões ornitológicas em ambientes naturais. A escuta refinada parece exigir esse tipo de exposição prolongada, atenta e relativamente isolada à fonte sonora.</p>
+
+<h3 class="subsecao">4.4. A formação musical sem mestre</h3>
+<p>Um ponto que merece destaque: os textos canônicos não registram nenhum mestre musical humano para Davi. Não se diz que aprendeu com tal sacerdote, ou que estudou na guilda de músicos de tal cidade. A formação musical aparece como algo que Davi já possui quando entra em cena, como dom anterior ao registro narrativo. Essa ausência de mestre é, ela mesma, instrutiva.</p>
+<p>O que ela sugere é que a formação musical de Davi se deu primariamente por imersão prolongada na paisagem sonora natural do pastoreio, com transferência dessa escuta refinada para o instrumento (a harpa, ou mais precisamente o <em>kinnor</em>, instrumento de cordas pequeno, possivelmente afinado em escala diatônica ou pentatônica, que Davi tocaria como instrumento solo ou acompanhamento vocal). O instrumento é tardio na sequência formativa; primeiro vem o ouvido, depois vêm as cordas.</p>
+<p>Como educador musical e estudante das relações entre música e cuidado humano, considero que a harpa de Davi foi a expressão máxima de algo que veio de dentro para expressar o sentimento natural — perfeito — do Poeta Supremo, que é Deus. Essa expressão máxima começou, primeiro, em escuta. Davi escutou o vento, os animais, o silêncio, e em algum ponto reconheceu nessa paisagem sonora um interlocutor — Aquele que, segundo a sua fé e a tradição que dele herdou, sustenta cada som do mundo em existência. A escuta de Davi é dupla desde o começo: escuta da paisagem natural e escuta de quem habita essa paisagem como sua origem.</p>
+
+<h2 class="secao" id="s5">5. Segundo ciclo — A invenção: Davi salmista</h2>
+
+<h3 class="subsecao">5.1. Os Salmos como invenções</h3>
+<p>Da escuta do pastor brota, em algum momento da biografia davídica, o salmista. A tradição atribui a Davi cerca de setenta e três dos cento e cinquenta Salmos canônicos — atribuição cuja exatidão histórica é objeto de discussão crítica, mas cujo significado estrutural para o argumento aqui desenvolvido é nítido: a tradição reconheceu em Davi a fonte paradigmática de um conjunto de composições que constituem, em conjunto, talvez o mais influente corpus poético-musical religioso da civilização ocidental.</p>
+<p>Os Salmos não são improvisos despreocupados. São construções formais cuidadosas, com características técnicas identificáveis: paralelismos hebraicos (sinonímico, antitético, sintético), refrões estruturais (como o famoso refrão do Salmo 136: "porque a sua misericórdia dura para sempre"), estruturas estróficas regulares, dispositivos retóricos como acróstico (Salmo 119, com cada estrofe iniciando por uma letra sucessiva do alfabeto hebraico) e quiasmo. Em terminologia musical, são <em>inventiones</em> no sentido pleno do termo retórico clássico: descobertas de matéria expressiva trabalhadas em forma elaborada.</p>
+
+<h3 class="subsecao">5.2. O paralelismo hebraico como estrutura compositiva</h3>
+<p>Vale demorar-se brevemente no paralelismo hebraico, dispositivo compositivo central dos Salmos. Diferentemente da poesia ocidental moderna, que opera primariamente por metro e rima, a poesia hebraica antiga opera primariamente por paralelismo — repetição com variação de uma mesma ideia em duas (raramente três) linhas sucessivas.</p>
+<p>O paralelismo sinonímico repete a mesma ideia em palavras diferentes:</p>
+<blockquote class="versiculo">"O Senhor é o meu pastor; nada me faltará. / Em verdes pastos me faz repousar; junto às águas tranquilas me conduz." (Salmo 23:1-2)</blockquote>
+<p>O paralelismo antitético contrasta duas ideias opostas:</p>
+<blockquote class="versiculo">"Porque o Senhor conhece o caminho dos justos, / mas o caminho dos ímpios perecerá." (Salmo 1:6)</blockquote>
+<p>O paralelismo sintético desenvolve, expande ou complementa a primeira linha na segunda:</p>
+<blockquote class="versiculo">"O Senhor reina; revestiu-se de majestade; / revestiu-se o Senhor e cingiu-se de força." (Salmo 93:1)</blockquote>
+<p>Esses três tipos básicos, com suas variações e combinações, estruturam praticamente todo o saltério. O efeito musical do paralelismo é considerável: na execução cantada (e os Salmos foram, originalmente, executados cantados, conforme indica a presença de indicações musicais em muitos deles, como "ao mestre de canto", "sobre os instrumentos de cordas", "segundo a melodia de tal e tal"), o paralelismo oferece estrutura natural para frases musicais simétricas, com perguntas e respostas, com tensão e resolução, com avanço e recapitulação.</p>
+<p>A escolha do paralelismo como dispositivo compositivo central não é aleatória. Ela ressoa com algo profundo da experiência humana da fala oral: aprender pela repetição com variação, fixar uma ideia por meio de seu eco transfigurado. O paralelismo é, em rigor, ferramenta de cuidado pedagógico — facilita memorização, internalização, transmissão. Os Salmos foram construídos para ser carregados pela comunidade que os recebia, e o paralelismo é o que torna esse carregamento possível.</p>
+
+<h3 class="subsecao">5.3. A invenção que responde, não cria do nada</h3>
+<p>Mas a invenção de Davi tem uma característica que a distingue fortemente da invenção musical contemporânea entendida como criatividade pura: ela não inventa do nada, ela responde. Cada salmo é resposta a algo previamente escutado — a misericórdia divina, a perseguição inimiga, o lamento próprio, a glória da criação. A invenção, em Davi, é estrutura responsiva, não geradora ex nihilo.</p>
+<p>Essa estrutura responsiva tem três implicações importantes. Primeira: a invenção pressupõe escuta anterior (o que conecta o segundo ciclo ao primeiro). Segunda: a invenção tem destinatário definido (Deus, o povo, o próprio salmista — frequentemente os três simultaneamente). Terceira: a invenção opera em economia comunicativa, não em economia expressiva pura — busca dizer algo a alguém, não apenas externar um interior.</p>
+<p>De minha perspectiva pessoal, formada na dupla experiência da música como prática herdada (recebida do meu pai Izaias Maciel, músico em atividade, que se apresentava em escolas durante a minha infância) e como objeto de reflexão acadêmica, a harpa de Davi parece a expressão máxima de algo que vem de dentro para encontrar o sentimento natural — perfeito — do Poeta Supremo, que é Deus.</p>
+<p>A frase do meu irmão Ronaldo Cupertino, tomada como epígrafe deste artigo, encontra confirmação dupla neste segundo ciclo: nos Salmos, a arte vem de dentro de Davi e, ao mesmo tempo, vem de dentro do próprio Deus que o constitui — não é expressão de circunstância (a perseguição, o trono, o exílio), embora cada salmo brote no meio de uma circunstância. A circunstância é ocasião; a fonte é interior.</p>
+
+<h3 class="subsecao">5.4. Tipologia dos Salmos: lamentos, hinos, súplicas, ações de graças</h3>
+<p>A tradição crítica costuma classificar os Salmos em algumas categorias principais. <em>Lamentos individuais</em> (cerca de cinquenta salmos) registram queixa, dor, súplica, e frequentemente terminam em expressão de confiança ou voto de louvor. <em>Lamentos coletivos</em> (uma dúzia) seguem estrutura análoga em escala comunitária. <em>Hinos</em> (uns vinte) celebram a grandeza de Deus, sua criação, sua intervenção histórica. <em>Salmos de ações de graças</em> agradecem livramento concreto. <em>Salmos reais</em> e <em>messiânicos</em> relacionam-se à monarquia davídica. <em>Salmos de Sião</em> celebram Jerusalém como lugar da presença divina. <em>Salmos de sabedoria</em> aproximam-se da literatura sapiencial.</p>
+<p>Essa tipologia, longe de mero exercício classificatório, revela algo importante para o argumento musicoterapêutico: a prática davídica de invenção não se restringe a um único registro afetivo. Davi não é músico apenas do louvor (como tendem a apresentá-lo certas tradições devocionais), nem apenas do lamento (como o reduzem certas leituras psicanalíticas modernas). Davi articula a gama afetiva inteira da experiência humana, e o faz musicalmente em forma. A musicoterapia que se inspira em Davi não pode, portanto, ser musicoterapia apenas de música suave e calma — precisa abraçar lamento, ira, súplica, alegria, confissão, em toda a sua gama.</p>
+
+<h2 class="secao" id="s6">6. Terceiro ciclo — O cuidado: Davi e Saul</h2>
+
+<h3 class="subsecao">6.1. A passagem fundadora de 1 Samuel 16</h3>
+<p>A passagem que mais imediatamente associa Davi à musicoterapia é 1 Samuel 16:14-23. Vale citá-la na tradução da Almeida Revista e Atualizada, ainda que de modo condensado:</p>
+<blockquote class="versiculo">"Tendo-se retirado o Espírito do Senhor de Saul, atormentava-o um espírito maligno, da parte do Senhor. Então, os seus servos lhe disseram: Eis que um espírito maligno, da parte de Deus, te atormenta. Manda, pois, senhor nosso, a teus servos, que estão na tua presença, que busquem um homem que saiba tocar harpa; e, quando o espírito maligno, da parte de Deus, vier sobre ti, ele a dedilhará, e te acharás melhor. [...] Veio, pois, Davi a Saul e se apresentou perante ele; Saul lhe cobrou afeição e o fez seu escudeiro. [...] E sucedia que, quando o tal espírito maligno, da parte de Deus, vinha sobre Saul, tomava Davi a harpa e a dedilhava; então, Saul sentia alívio e se achava melhor, e o espírito maligno se retirava dele." (1 Samuel 16:14-23, ARA)</blockquote>
+<p>A passagem é breve e estruturalmente densa. Vale destacar três aspectos.</p>
+
+<h3 class="subsecao">6.2. O diagnóstico: "espírito maligno da parte de Deus"</h3>
+<p>O texto descreve a condição de Saul como espírito maligno proveniente de Deus. A formulação é teologicamente complexa e tem suscitado debates por dois milênios. Não cabe aqui esgotar essa discussão, mas vale registrar que a melhor leitura crítica contemporânea entende a expressão como diagnóstico ambíguo entre dimensão espiritual (alienação da presença divina) e dimensão psicológica (estado depressivo, ansioso, agitado). A tradição musicoterapêutica posterior, com prudência metodológica, evita posicionar-se sobre a etiologia exata e foca o que é descritível: Saul apresentava perturbação severa, recorrente, debilitante.</p>
+<p>Importante também: o texto não sugere que Davi cure Saul de modo definitivo. A formulação é precisa: quando Davi toca, Saul "sentia alívio", "se achava melhor", e o espírito maligno "se retirava dele". A musicoterapia davídica opera por alívio sintomático recorrente, não por cura definitiva. Saul continua tendo crises; Davi continua sendo chamado; a musicoterapia é prática continuada, não intervenção única.</p>
+
+<h3 class="subsecao">6.3. A prática: "tomava Davi a harpa e a dedilhava"</h3>
+<p>A descrição da prática musical de Davi para Saul é sóbria, quase telegráfica: tomava a harpa e a dedilhava. Não há descrição do repertório (improvisos? salmos? melodias tradicionais?). Não há descrição da duração das sessões. Não há descrição da postura, do ambiente, da preparação. O texto retém o essencial: Davi tocava, e Saul melhorava.</p>
+<p>Essa sobriedade descritiva é instrutiva. Ela sugere que o ato musical fundamental — alguém que toca para alguém que sofre — opera por dinâmicas que excedem qualquer roteiro específico. Não há receita davídica. Há uma estrutura: presença, escuta da condição do outro, oferta musical responsiva, espaço para o efeito acontecer.</p>
+
+<h3 class="subsecao">6.4. O que cura: não a habilidade, mas a profundidade</h3>
+<p>O que torna a música de Davi capaz desse efeito? Não é virtuosismo técnico isolado — havia, certamente, melhores harpistas no reino. Não é beleza puramente formal — havia composições mais elaboradas em circulação na corte. O que torna a música de Davi capaz de aliviar Saul é a continuidade com os dois ciclos anteriores: ela é música de alguém que primeiro escutou o mundo (ciclo 1), depois aprendeu a responder em forma (ciclo 2), e por isso, quando toca para o rei doente, traz na sua música o eco daquela paisagem sonora primordial e daquela afetividade divina percebida. O que alivia Saul não é a habilidade de Davi — é a profundidade do que Davi traz.</p>
+<p>Essa observação tem consequências práticas para a musicoterapia contemporânea. Sugere que a formação do musicoterapeuta não pode ser puramente técnica (aprender repertório, técnicas de execução, protocolos clínicos). Precisa incluir, em camadas anteriores, formação na escuta atenta do mundo e na prática de invenção responsiva. O musicoterapeuta que oferece ao paciente apenas técnica oferece menos que o pastor de Belém oferecia a Saul. Isso não desqualifica a técnica — exige a sua sustentação por algo anterior.</p>
+
+<h3 class="subsecao">6.5. A relação Davi-Saul como modelo do encontro terapêutico</h3>
+<p>Vale acrescentar uma observação sobre a configuração relacional do encontro Davi-Saul. Davi é jovem, Saul é o rei estabelecido. Davi é súdito, Saul é o soberano. Há, na superfície, assimetria de poder maciça em favor de Saul. Mas no plano específico do encontro musical-terapêutico, a configuração se inverte: Davi é o cuidador, Saul é o cuidado. O músico, naquele momento, ocupa posição de mestria em relação ao rei.</p>
+<p>Essa inversão temporária e localizada de hierarquia é constitutiva de toda relação terapêutica genuína. O terapeuta, em sessão, opera com competência específica que não anula, mas relativiza, as hierarquias sociais externas. Saul não deixa de ser rei quando Davi toca para ele — mas a relação musical instaura espaço em que outra ordem de competência se manifesta. A musicoterapia inspirada em Davi recupera essa noção de que o espaço musical-terapêutico é, por natureza, espaço de redistribuição temporária de competências, em que o sofredor é cuidado por alguém que oferece o que tem.</p>
+
+<h2 class="secao" id="s7">7. Síntese: os três ciclos como movimento único</h2>
+<p>Tendo desenvolvido cada um dos três ciclos separadamente, importa agora articular sua relação interna. A tese central deste artigo é que os três ciclos — escuta, invenção, cuidado — não constituem etapas sucessivas no tempo, mas dimensões simultâneas e mutuamente sustentadas de uma única prática musical integral.</p>
+<p>Davi não é primeiro pastor, depois salmista, depois cuidador, como se cada fase substituísse a anterior. Ele é, em momentos diversos de sua vida e até simultaneamente, as três coisas. Quando toca para Saul no palácio, continua escutando — escuta o estado do rei, escuta o ambiente da sala, escuta sua própria condição interior. Quando compõe um salmo, continua cuidando — cuida da comunidade que vai cantar, cuida de si mesmo no ato de articular sua experiência, cuida do Deus a quem dirige a oração. Quando pastoreia (e o pastoreio reaparece simbolicamente em sua função real, como nas imagens pastorais do Salmo 23), continua inventando — invenção é a operação contínua daquele que escuta atentamente.</p>
+<p>A estrutura, portanto, não é linear: escuta-invenção-cuidado como flecha do tempo. É circular ou, melhor, espiralada: cada ciclo sustenta o próximo e é retroalimentado por ele. A escuta sustenta a invenção (sem material auditivo não há sobre o que compor); a invenção sustenta o cuidado (a forma é o veículo do efeito terapêutico); o cuidado retroalimenta a escuta (cuidar do outro afina o ouvido para nuances que escutas neutras não captam).</p>
+<p>Essa estrutura espiralada é, para mim, o modelo mais alto do que pode ser uma vida musical: não a de um técnico que apenas executa, não a de um virtuoso que apenas exibe, não a de um terapeuta isolado que apenas aplica protocolos, mas a de alguém em quem essas três dimensões se entretecem em movimento único.</p>
+
+<h2 class="secao" id="s8">8. Recepção de Davi na tradição musicoterapêutica</h2>
+
+<h3 class="subsecao">8.1. Davi como referência fundadora unânime</h3>
+<p>A presença de Davi nos manuais introdutórios da musicoterapia ocidental é praticamente universal. <span class="citacao-autor">Bruscia (2000)</span>, em sua tentativa de oferecer definição operacional do campo, menciona o episódio de 1 Samuel 16 como exemplo histórico precoce de aplicação intencional da música para fins terapêuticos. Rolando Benenzon, em sua tradição argentina, retorna à mesma passagem ao introduzir o que chama de paradigma da identidade sonora. Schneider, em síntese histórica, situa Davi como ponto de partida da longa linhagem que se estende até as escolas contemporâneas.</p>
+<p>Essa unanimidade da referência davídica contrasta, contudo, com a frequente superficialidade de seu tratamento. Davi entra nos manuais como anedota de abertura, raramente como objeto de análise sistemática. A passagem é citada, comentada brevemente, e o texto avança para os tópicos contemporâneos. Esse artigo é, em parte, tentativa de oferecer à figura davídica o tratamento sistemático que sua centralidade na história disciplinar exigiria.</p>
+
+<h3 class="subsecao">8.2. Tradições paralelas: Pitágoras, Damon, Boécio</h3>
+<p>Vale registrar que a tradição musicoterapêutica ocidental não tem apenas raiz hebraica. Em paralelo (e cronologicamente bem posterior ao Davi histórico), desenvolveram-se no mundo grego reflexões sobre o efeito ético e terapêutico da música. Pitágoras teria desenvolvido sistema de modos cujo poder afetivo seria especificamente terapêutico. Damon de Atenas teria sistematizado a doutrina dos modos éticos, segundo a qual cada modo musical induz disposição psíquica específica. Boécio, na transição Antiguidade-Idade Média, sistematizou em <em>De Institutione Musica</em> a tripartição música mundana-humana-instrumental, com implicações terapêuticas significativas.</p>
+<p>Essas tradições paralelas convergiram, na Idade Média e início da Modernidade, com a tradição davídica em uma síntese que constituiu a base teórica da musicoterapia ocidental até pelo menos o século XVIII. O Davi pintado nas iluminuras medievais e cantando os Salmos nas igrejas é simultaneamente referência hebraica e modelo de aplicação dos princípios pitagórico-boecianos da harmonia musical-cósmica-curativa.</p>
+
+<h3 class="subsecao">8.3. Davi na musicoterapia contemporânea brasileira</h3>
+<p>No contexto brasileiro, a musicoterapia profissionalizou-se ao longo da segunda metade do século XX, com formação de associações (UBAM, AMT-RJ), criação de cursos universitários reconhecidos pelo MEC, e finalmente regulamentação profissional pela Lei nº 14.842 de 11 de abril de 2024, que reconheceu formalmente a profissão e estabeleceu seus requisitos de habilitação. Em todos esses desenvolvimentos, a figura de Davi permaneceu como referência simbólica, embora a prática clínica brasileira tenha se orientado predominantemente pelas teorias contemporâneas (Bruscia, Benenzon, Nordoff-Robbins, GIM de Helen Bonny).</p>
+<p>A relevância contemporânea de Davi para a musicoterapia brasileira, neste artigo, é menos a de modelo clínico operacional (a prática clínica regulamentada exige formação universitária específica, com supervisão e protocolos próprios) e mais a de estrutura conceitual que pode iluminar tanto a prática clínica quanto suas extensões pedagógicas em educação musical básica. É justamente essa extensão pedagógica que será desenvolvida na Seção 10.</p>
+
+<h2 class="secao" id="s9">9. Diálogo com a filosofia da música contemporânea</h2>
+<p>A leitura da figura davídica aqui empreendida ganha em densidade quando articulada com cinco vozes da filosofia da música contemporânea. Cada uma dessas vozes ilumina uma dimensão específica do paradigma davídico, e em conjunto oferecem quadro teórico robusto para sustentar a tese aqui defendida.</p>
+
+<h3 class="subsecao">9.1. Schopenhauer: a harpa de Davi e a Vontade</h3>
+<p>Em <em>O Mundo como Vontade e Representação</em> (1819), <span class="citacao-autor">Schopenhauer (2005)</span> atribui à música estatuto único entre as artes: enquanto pintura, escultura e poesia representam ideias derivadas da Vontade que move o mundo, a música expressaria diretamente essa Vontade, sem mediação de conceito ou imagem. A música não imita o mundo; ela diz, de modo imediato, o que o mundo é em sua essência.</p>
+<p>Aplicada à harpa de Davi, a tese schopenhaueriana sugere que o efeito de alívio sobre Saul não é mediado por conteúdo conceitual (Davi não está convencendo Saul de nada por meio das palavras dos salmos), mas opera diretamente sobre a estrutura volitiva do rei — sobre aquela camada profunda do psiquismo que precede a representação conceitual. A música davídica chega a um Saul mais profundo que o Saul consciente, e por isso o alivia em camada que a fala não alcançaria.</p>
+
+<h3 class="subsecao">9.2. Jankélévitch: a harpa de Davi e o inefável</h3>
+<p>Vladimir <span class="citacao-autor">Jankélévitch (1983)</span>, em <em>La Musique et l'Ineffable</em>, recusa qualquer redução da música ao conceito. A música, segundo ele, não diz nada — e justamente por não dizer nada conceitualmente, diz tudo afetivamente. Opera no registro do inefável: aquilo de que se pode falar musicalmente, mas não em palavras.</p>
+<p>A passagem de 1 Samuel 16 ilustra essa tese com precisão notável. O texto não registra que Davi tenha pronunciado palavra alguma para Saul. A intervenção é puramente instrumental: Davi tomava a harpa e a dedilhava. Não há sermão, não há explicação, não há aconselhamento. E justamente nessa abstinência da palavra opera o efeito. Davi diz a Saul algo que palavras não diriam, e Saul ouve algo que palavras não fariam ouvir.</p>
+
+<h3 class="subsecao">9.3. Adorno: a harpa de Davi e o conteúdo de verdade</h3>
+<p>Theodor W. <span class="citacao-autor">Adorno (2018)</span>, em <em>Filosofia da Nova Música</em>, sustenta que a música possui <em>Wahrheitsgehalt</em> — conteúdo de verdade — que se realiza no enfrentamento histórico entre forma e material. A música não é decorativa nem subjetiva: ela registra, em sua própria construção, tensões e contradições do mundo histórico em que é feita.</p>
+<p>Aplicada a Davi, a perspectiva adorniana acrescenta camada crítica importante. A harpa de Davi para Saul não opera por idealização ou maquiagem da situação do rei. Ela opera por enfrentamento da condição real: a perturbação espiritual de Saul, a tensão política de seu reinado em declínio, a complexidade da relação entre os dois (que culminará, tragicamente, em perseguição de Saul contra Davi). A música davídica é, em chave adorniana, música honesta com a história em que se dá. Não nega Saul nem o engana; oferece a Saul, em forma musical, algo verdadeiro sobre sua condição, e por essa verdade promove alívio.</p>
+
+<h3 class="subsecao">9.4. Scruton: a harpa de Davi e a intencionalidade musical</h3>
+<p>Roger <span class="citacao-autor">Scruton (1997)</span>, em <em>The Aesthetics of Music</em>, defende que ouvir música é ato intencional distinto de ouvir mero som. Ouvimos sons no mundo natural; ouvimos música quando algo no som nos convida a uma escuta em que reconhecemos movimento, tensão, repouso, expectativa — categorias que não estão fisicamente no som, mas que emergem da nossa relação intencional com ele.</p>
+<p>A intervenção de Davi sobre Saul, em chave scrutoniana, opera precisamente nessa modificação da intencionalidade auditiva do rei. Saul, em crise, ouve o mundo com escuta tomada pelo sofrimento — escuta perseguidora, em que cada som potencialmente significa ameaça. A música de Davi não muda os sons que cercam Saul, mas modifica a intencionalidade com que Saul escuta. O alívio que Saul sente não é mudança do mundo em volta — é mudança do seu modo de escutar o mundo.</p>
+
+<h3 class="subsecao">9.5. Wisnik: a harpa de Davi e a tridimensionalidade do som</h3>
+<p>No contexto brasileiro, José Miguel <span class="citacao-autor">Wisnik (1989)</span>, em <em>O Som e o Sentido</em>, articula com originalidade as três dimensões físicas do som — ruído, pulso, altura — com as três dimensões formais da música — duração, timbre, melodia. A música ocidental, segundo Wisnik, tomou ao longo de sua história decisões progressivamente refinadas sobre como organizar essas três dimensões.</p>
+<p>A harpa de Davi opera, em chave wisnikiana, com equilíbrio particular entre as três dimensões. O <em>kinnor</em> tinha caixa de ressonância de madeira, cordas de tripa animal, e produzia som rico em ruído (decaimento espectral, batimentos sutis entre cordas), pulso (pelo dedilhar rítmico da execução) e altura (pela seleção de notas escalares). O equilíbrio entre essas três dimensões — sem privilegiar excessivamente a altura, como faria a música ocidental tonal posterior — preservava no som davídico o ruído originário do mundo, que é, em última análise, o que conecta a música humana à paisagem sonora natural da qual Davi se formou auditivamente.</p>
+
+<h3 class="subsecao">9.6. Síntese filosófica</h3>
+<p>Articulando essas cinco vozes, é possível enunciar a tese central deste artigo em formulação técnica: a harpa de Davi como prática musicoterapêutica paradigmática opera (a) como expressão direta de uma interioridade musical à maneira de Schopenhauer, alcançando camada do psiquismo de Saul anterior à representação conceitual; (b) no registro do inefável jankélévitchiano, comunicando sem mediação de palavra; (c) submetendo-se à exigência adorniana de honestidade histórica diante da condição real do rei e do reino; (d) modificando intencionalmente a escuta de Saul no sentido scrutoniano, alterando como o rei escuta o mundo em vez de mudar o mundo que ele escuta; e (e) preservando, em sua materialidade composicional, a tridimensionalidade som-pulso-altura descrita por Wisnik, conexão acústica entre o pastoreio das colinas e o salão real.</p>
+
+<h2 class="secao" id="s10">10. Aplicação na educação musical básica brasileira</h2>
+<p>A leitura da figura davídica em três ciclos não é puramente teórica. Ela tem aplicação direta em prática pedagógica na educação musical básica, conforme o autor tem desenvolvido em sua atuação como professor concursado da rede municipal de Contagem, Minas Gerais. Três exercícios pedagógicos serão descritos a seguir, cada um operacionalizando um dos três ciclos.</p>
+
+<h3 class="subsecao">10.1. Cartografia sonora da escola (operacionalizando o ciclo da escuta)</h3>
+<p>O primeiro exercício consiste em propor aos estudantes que percorram os espaços da escola — pátio, sala de aula, refeitório, área externa, corredores — com a única tarefa de escutar, sem julgar nem nomear. O exercício dura tipicamente vinte a trinta minutos, dividido em silêncios breves em pontos diferentes, com transição silenciosa entre eles.</p>
+<p>Ao retornarem à sala, os estudantes registram, em notação livre (gráfica, verbal ou musical, conforme cada um preferir), três sons que mais lhes chamaram a atenção. Não há respostas certas. Não há nota. Há registro fenomenológico do que cada um efetivamente escutou.</p>
+<p>O conjunto desses registros constitui uma cartografia sonora coletiva da escola. Em rodas de conversa subsequentes, os estudantes comparam o que escutaram — descobrindo que, no mesmo espaço, ouviram coisas diferentes; e que sons que para alguns passaram despercebidos, para outros foram centrais. Essa descoberta é, pedagogicamente, o ponto principal: a escuta é seletiva, formada, dependente da atenção, e portanto educável.</p>
+<p>Esse exercício é a reatualização, em escala adequada à educação básica, do primeiro ciclo davídico. Levar um estudante a percorrer a escola apenas escutando é fazê-lo refazer, em escala adequada, o gesto inaugural de Davi pastor — escutar o mundo antes de tocá-lo. Não há paralelo forçado nem comparação irreverente; há reconhecimento de que a operação fundamental da formação musical é a mesma há três mil anos.</p>
+
+<h3 class="subsecao">10.2. Invenção sobre motivo encontrado (operacionalizando o ciclo da invenção)</h3>
+<p>O segundo exercício parte da cartografia sonora. Cada estudante escolhe, entre os sons que registrou, um som específico para trabalhar. O som é então transcrito melodicamente, com auxílio do professor — ajustando-se ao sistema de notação que o estudante já conhece (notação convencional, notação gráfica, tablatura, conforme o caso). A transcrição não busca fidelidade absoluta; busca capturar uma característica saliente do som original (sua altura predominante, seu padrão rítmico, sua silhueta espectral).</p>
+<p>Uma vez transcrito, o motivo é trabalhado por procedimentos elementares de variação: repetição (tocar três ou cinco vezes seguidas), deslocamento de altura (tocar uma terça acima, depois uma terça abaixo), inversão (inverter direção das alturas), expansão rítmica (cada nota com o dobro de duração), contração rítmica (cada nota com metade da duração). O estudante experimenta as variações em seu instrumento (que pode ser flauta doce, voz, teclado de pequena extensão, percussão improvisada com objetos da sala).</p>
+<p>O resultado final é uma pequena invenção autoral, com origem no mundo (no som efetivamente escutado pelo estudante) e não em fórmulas abstratas distantes de sua experiência. O estudante percebe, frequentemente com surpresa, que conseguiu compor algo a partir de uma escuta que parecia, à primeira vista, banal — o som do ventilador, o ranger de uma porta, o assobio do colega no recreio.</p>
+<p>Esse exercício é a reatualização do segundo ciclo davídico. Quando o estudante transcreve um som escutado e o desdobra em pequena invenção, ele refaz o gesto do salmista em escala miniaturizada: a partir do escutado, constrói uma resposta formalmente cuidada. A continuidade entre Davi e a criança de Contagem não é metáfora — é reconhecimento da unidade do gesto musical humano.</p>
+
+<h3 class="subsecao">10.3. Coro de paisagem (operacionalizando o ciclo do cuidado)</h3>
+<p>O terceiro exercício é o mais avançado e exige que os dois anteriores tenham sido trabalhados previamente. Em formação coletiva, divide-se a turma em pequenos grupos (três a cinco estudantes cada). Cada grupo escolhe um elemento sonoro da paisagem (vento, chuva, pássaro, água, fogo crepitante, tráfego distante) para reproduzir vocalmente.</p>
+<p>Cada grupo desenvolve, em ensaios breves, sua reprodução vocal — explorando diferentes timbres (assobio, sopro, vocalização de vogais, consoantes percussivas), diferentes alturas (variando registro), diferentes dinâmicas (intensidade variável). O professor circula entre os grupos, oferecendo sugestões pontuais sem dirigir excessivamente.</p>
+<p>Em momento subsequente, os grupos se reúnem para execução conjunta. As entradas são organizadas em sequência (cada grupo entra após o anterior, sobrepondo-se) ou em sobreposição (todos os grupos simultaneamente, em texturas variadas). O resultado, ainda que simples, introduz, sem jargão técnico, noções fundamentais da composição: textura, polifonia, ostinato, forma.</p>
+<p>Mas o aprendizado mais importante do exercício não é técnico-composicional. É relacional. Cada voz precisa se ajustar às outras; cada gesto sonoro precisa responder aos demais; o resultado é um espaço acústico em que o grupo se reconhece como comunidade auditiva. Não há terapia formal aqui — há, contudo, o gesto fundamental do qual toda terapia musical genuína procede: a oferta mútua de presença sonora cuidadosa.</p>
+<p>Esse exercício é a reatualização do terceiro ciclo davídico. Quando os estudantes se organizam coletivamente para reproduzir vocalmente os sons da paisagem em sobreposição, eles experimentam, em escala mínima, a função do cuidado mútuo via música — o mesmo gesto pelo qual Davi tocava harpa para Saul, agora redistribuído entre pares na sala de aula.</p>
+
+<h3 class="subsecao">10.4. Avaliação e observações sobre a prática</h3>
+<p>A aplicação dos três exercícios, em duas turmas de educação básica em Contagem ao longo do ano letivo de 2024-2025, gerou observações que merecem registro. Primeira: estudantes inicialmente identificados como "sem talento musical" pelas professoras de outras áreas frequentemente apresentaram performances notáveis nos exercícios de cartografia sonora — sugerindo que a definição corrente de talento musical na escola brasileira está enviesada para habilidades de execução instrumental, ignorando a dimensão da escuta refinada.</p>
+<p>Segunda: a sequência três-ciclos (escuta, invenção, cuidado) produziu, em ambas as turmas, queda significativa em conflitos interpessoais durante as aulas de música, particularmente na fase do coro de paisagem. Os estudantes pareciam relacionar-se de modo diferente uns com os outros quando atravessavam o exercício do escutar atento e do compor a partir do escutado — como se essas operações redesenhassem brevemente a estrutura relacional do grupo.</p>
+<p>Terceira: a articulação explícita com a figura de Davi (apresentada como histórico-cultural, sem proselitismo religioso, conforme exigência da escola pública laica brasileira) ofereceu aos estudantes ancoragem narrativa que facilitou compreensão das três fases do trabalho. A cultura brasileira mantém familiaridade ampla com o personagem (inclusive em famílias não-religiosas, dada a permeação cultural da tradição cristã), o que torna a referência didaticamente eficaz sem precisar de explicitação devocional.</p>
+
+<h2 class="secao" id="s11">11. Considerações finais</h2>
+<p>Este artigo argumentou que a figura de Davi, longe de constituir mera referência retórica nos manuais de musicoterapia, oferece estrutura analítica de três ciclos articulados — escuta, invenção, cuidado — capaz de iluminar tanto a prática clínica musicoterapêutica regulamentada quanto suas extensões pedagógicas em educação musical básica. A leitura dos três ciclos como movimento único e simultâneo permitiu mostrar a continuidade interna do paradigma davídico, em diálogo articulado com cinco vozes da filosofia da música ocidental contemporânea.</p>
+<p>A aplicação pedagógica em três exercícios testados em sala de aula na rede municipal de Contagem demonstrou que a estrutura analítica é operacionalizável em escala adequada à educação básica brasileira, com benefícios observáveis tanto em desenvolvimento musical dos estudantes quanto em dinâmica relacional do grupo. Essa operacionalização não pretende ser musicoterapia clínica — atividade regulamentada pela Lei nº 14.842/2024 e que exige formação universitária específica — mas educação musical informada pela tradição musicoterapêutica, dimensão pedagógica que está plenamente ao alcance do professor de música licenciado atuante na escola pública.</p>
+<p>Indicações de pesquisa futura incluem: aprofundamento da análise dos paralelismos hebraicos como dispositivo compositivo (Seção 5.2), com possível tradução em exercícios pedagógicos específicos; estudo comparativo entre a tradição davídica e tradições musicoterapêuticas não-ocidentais (música Carnática indiana, tradição Sufi, práticas musicais terapêuticas afro-brasileiras); investigação empírica longitudinal sobre os efeitos da aplicação dos três exercícios em coortes maiores de estudantes; análise das implicações da leitura davídica para a formação continuada de professores de música na rede pública brasileira.</p>
+<p>Fecho com a frase de meu irmão Ronaldo Cupertino da Silva, artista plástico que pinta com a boca após tetraplegia de 1992, citada nesta obra com sua autorização formal:</p>
+<blockquote class="citacao">Se a Arte não vem de dentro, não é arte: é expressão de circunstância.</blockquote>
+<p>Em Davi pastor, a arte vem de dentro de quem antes escutou o mundo. Em Davi salmista, a arte vem de dentro de quem responde por forma a Deus e ao povo. Em Davi tocando harpa para Saul, a arte vem de dentro de quem oferece ao outro o que recebeu dos dois ciclos anteriores. Em todos os três ciclos, a circunstância — colina de Belém, perseguição, palácio em crise — é ocasião, mas não fonte. A fonte está dentro, e a tarefa do músico, do educador e do cuidador, em qualquer época, é a mesma: oferecer ao outro aquilo que vem de dentro, com integridade, sem se deixar reduzir à circunstância.</p>
+
+<h2 class="secao" id="refs">Referências</h2>
+<ol class="referencias">
+  <li>ADORNO, T. W. <em>Filosofia da nova música</em>. Trad. M. Bandeira. São Paulo: Perspectiva, 2018.</li>
+  <li>BÍBLIA SAGRADA. <em>Almeida Revista e Atualizada</em>. Barueri: Sociedade Bíblica do Brasil, 1993. Particularmente: 1 Samuel 16; Livro dos Salmos.</li>
+  <li>BRUSCIA, K. E. <em>Definindo musicoterapia</em>. Trad. M. Ronchini. Rio de Janeiro: Enelivros, 2000.</li>
+  <li>CAGE, J. <em>Silence: Lectures and Writings</em>. Middletown: Wesleyan University Press, 1961.</li>
+  <li>FELD, S. <em>Sound and Sentiment: Birds, Weeping, Poetics, and Song in Kaluli Expression</em>. Philadelphia: University of Pennsylvania Press, 1982.</li>
+  <li>FONTERRADA, M. T. de O. <em>De tramas e fios: um ensaio sobre música e educação</em>. São Paulo: Editora UNESP, 2008.</li>
+  <li>JANKÉLÉVITCH, V. <em>La musique et l'ineffable</em>. Paris: Seuil, 1983.</li>
+  <li>SCHAFER, R. M. <em>O ouvido pensante</em>. Trad. M. T. Fonterrada et al. São Paulo: Editora UNESP, 1991.</li>
+  <li>SCHAFER, R. M. <em>The Soundscape: Our Sonic Environment and the Tuning of the World</em>. Rochester: Destiny Books, 1994.</li>
+  <li>SCHOPENHAUER, A. <em>O mundo como vontade e representação</em>. Trad. J. Barboza. São Paulo: Unesp, 2005.</li>
+  <li>SCRUTON, R. <em>The Aesthetics of Music</em>. Oxford: Oxford University Press, 1997.</li>
+  <li>SILVA, R. C. da. Comunicação pessoal ao autor. [s.d.]. Citada nesta obra mediante autorização formal do citado.</li>
+  <li>SOUZA, E. de. <em>Projeto Ótimo de uma Antena Patch com Metamaterial</em>. 2018. 79 f. Dissertação (Mestrado em Engenharia Elétrica) — Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, 2018. Orientadora: Rose Mary de Souza Batalha. Disponível em: <a href="https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf">https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf</a>.</li>
+  <li>WISNIK, J. M. <em>O som e o sentido: uma outra história das músicas</em>. São Paulo: Companhia das Letras, 1989.</li>
+</ol>
+
+<footer class="assinatura">
+  <p class="destaque-rodape">Eduardo de Souza</p>
+  <p>Mestre em Engenharia Elétrica (PUC Minas, 2018) · Licenciado em Música (FAMOSP, 2024)<br>
+  Professor da rede municipal de Contagem/MG · Contagem, Minas Gerais, Brasil<br>
+  Artigo autoral · Publicado em eaqvd.com/pedagogia/ · Maio de 2026</p>
+</footer>
+
+</div>
+</body>
+</html>

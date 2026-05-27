@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Eduardo de Souza">
+<meta name="description" content="Pré-projeto de pesquisa de doutorado em Ciências da Religião — Práticas musicais de tradição cristã em contextos não-eclesiais — Eduardo de Souza, 2026">
+<meta name="keywords" content="música, religião, ciências da religião, etnomusicologia, gestão musical, paisagem sonora, PUC Minas, Eduardo de Souza, Contagem">
+<title>Práticas musicais de tradição cristã em contextos não-eclesiais — Pré-projeto de doutorado — Eduardo de Souza</title>
+<style>
+:root {
+  --texto: #1a1a1a;
+  --texto-suave: #555;
+  --destaque: #1F3A5F;
+  --destaque-claro: #2E5984;
+  --fundo: #fdfdfb;
+  --fundo-caixa: #f5f3ee;
+  --borda: #d8d4c8;
+  --max-largura: 760px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--texto);
+  background: var(--fundo);
+  padding: 2rem 1rem 4rem;
+}
+.container {
+  max-width: var(--max-largura);
+  margin: 0 auto;
+}
+header.capa {
+  text-align: center;
+  border-bottom: 1px solid var(--borda);
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+header.capa .breadcrumb {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+header.capa .breadcrumb a {
+  color: var(--destaque-claro);
+  text-decoration: none;
+}
+header.capa .breadcrumb a:hover { text-decoration: underline; }
+header.capa .instituicao {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+header.capa h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  color: var(--destaque);
+  margin: 1.5rem 0 0.5rem;
+  font-weight: bold;
+}
+header.capa .subtitulo {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--texto-suave);
+  margin-bottom: 2rem;
+}
+header.capa .autor {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+header.capa .credenciais {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+header.capa .data {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-top: 1.5rem;
+}
+.aviso {
+  background: var(--fundo-caixa);
+  border-left: 4px solid var(--destaque-claro);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+.sumario {
+  background: var(--fundo-caixa);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0 3rem;
+  border-radius: 4px;
+}
+.sumario h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--destaque);
+  margin-bottom: 1rem;
+  border: 0;
+  padding: 0;
+}
+.sumario ol {
+  list-style: none;
+  counter-reset: secao;
+}
+.sumario ol li {
+  counter-increment: secao;
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--borda);
+}
+.sumario ol li:last-child { border-bottom: 0; }
+.sumario ol li::before {
+  content: counter(secao) ". ";
+  color: var(--destaque-claro);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.sumario a {
+  color: var(--texto);
+  text-decoration: none;
+}
+.sumario a:hover { color: var(--destaque); text-decoration: underline; }
+h2.secao {
+  font-size: 1.5rem;
+  color: var(--destaque);
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--destaque-claro);
+}
+h3.subsecao {
+  font-size: 1.2rem;
+  color: var(--destaque-claro);
+  margin: 2rem 0 1rem;
+  font-style: italic;
+}
+p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  text-indent: 2em;
+  hyphens: auto;
+}
+p.sem-recuo { text-indent: 0; }
+blockquote {
+  margin: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  background: var(--fundo-caixa);
+  border-left: 4px solid var(--destaque-claro);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-indent: 0;
+}
+ul.lista-itens {
+  margin: 1rem 0 1.5rem 2rem;
+}
+ul.lista-itens li {
+  margin-bottom: 0.6rem;
+  line-height: 1.65;
+}
+.hipotese {
+  background: var(--fundo-caixa);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  border-left: 3px solid var(--destaque-claro);
+}
+.hipotese strong { color: var(--destaque); }
+table.cronograma {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+}
+table.cronograma th, table.cronograma td {
+  border: 1px solid var(--borda);
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+}
+table.cronograma th {
+  background: var(--destaque);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+table.cronograma td:not(:first-child) {
+  text-align: center;
+  font-weight: bold;
+  color: var(--destaque);
+}
+table.cronograma tr:nth-child(even) td { background: var(--fundo-caixa); }
+ol.referencias {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+ol.referencias li {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+footer.assinatura {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--borda);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+footer.assinatura .destaque-rodape {
+  color: var(--destaque);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 1rem 0.75rem 3rem; }
+  header.capa h1 { font-size: 1.5rem; }
+  h2.secao { font-size: 1.25rem; }
+  blockquote { margin: 1rem 0; }
+  p { text-indent: 1.5em; }
+  table.cronograma { font-size: 0.75rem; }
+  table.cronograma th, table.cronograma td { padding: 0.3rem 0.2rem; }
+}
+@media print {
+  body { font-size: 12pt; background: white; padding: 0; }
+  .sumario, .aviso { background: none; border: 1px solid #ccc; }
+  blockquote { background: none; border-left: 3px solid #555; }
+  h2.secao { page-break-after: avoid; }
+  p, blockquote { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="capa">
+  <div class="breadcrumb">
+    <a href="/">Início</a> &raquo; <a href="/pedagogia/">Pedagogia</a> &raquo; Pré-projeto de Doutorado
+  </div>
+  <div class="instituicao">
+    Pontifícia Universidade Católica de Minas Gerais<br>
+    Programa de Pós-Graduação em Ciências da Religião<br>
+    Instituto de Filosofia e Teologia Dom João Resende Costa<br>
+    <em>Campus Coração Eucarístico — Belo Horizonte/MG</em>
+  </div>
+  <h1>Práticas musicais de tradição cristã<br>em contextos não-eclesiais:</h1>
+  <p class="subtitulo">gestão, autonomia e cuidado em coletivos brasileiros contemporâneos</p>
+  <p class="autor">Eduardo de Souza</p>
+  <p class="credenciais">
+    Licenciado em Educação Artística com habilitação em Música — FAMOSP (2024)<br>
+    Mestre em Engenharia Elétrica — PUC Minas (2018)<br>
+    Professor da rede municipal de Contagem/MG
+  </p>
+  <p class="data">Belo Horizonte — Maio de 2026</p>
+</header>
+
+<div class="aviso">
+  <strong>Natureza do documento.</strong> Este é um pré-projeto de pesquisa de doutorado, elaborado pelo autor como peça acadêmica de candidatura ao processo seletivo do Programa de Pós-Graduação em Ciências da Religião da PUC Minas. Não constitui tese defendida nem artigo publicado em periódico. Texto autoral em desenvolvimento, disponibilizado neste portal pessoal para registro de produção intelectual em curso.
+</div>
+
+<div class="sumario">
+  <h2>Sumário</h2>
+  <ol>
+    <li><a href="#s1">Apresentação e delimitação do tema</a></li>
+    <li><a href="#s2">Problema de pesquisa</a></li>
+    <li><a href="#s3">Hipóteses de trabalho</a></li>
+    <li><a href="#s4">Objetivos</a></li>
+    <li><a href="#s5">Justificativa</a></li>
+    <li><a href="#s6">Fundamentação teórica preliminar</a></li>
+    <li><a href="#s7">Metodologia</a></li>
+    <li><a href="#s8">Cronograma</a></li>
+    <li><a href="#refs">Referências</a></li>
+  </ol>
+</div>
+
+<h2 class="secao" id="s1">1. Apresentação e delimitação do tema</h2>
+<p>O presente pré-projeto propõe uma investigação de doutorado sobre as práticas musicais de tradição cristã que se desenvolvem, no Brasil contemporâneo, fora das estruturas eclesiais formais — isto é, em coletivos, redes e espaços onde músicos e ouvintes mobilizam repertório musical de raiz cristã (hinos, Salmos, espirituais, cânticos litúrgicos, música sacra) sem mediação institucional de igreja específica, sem submissão a autoridade pastoral denominacional e sem vinculação orgânica a corpo eclesiástico. Esse fenômeno, crescente nas últimas duas décadas em decorrência de mudanças no campo religioso brasileiro, configura objeto sociocultural ainda pouco estudado em sua dimensão de gestão — isto é, em sua dimensão organizacional, econômica, autoral e comunitária.</p>
+<p>A investigação parte da hipótese de que esses coletivos não constituem apenas resíduo ou continuação enfraquecida das práticas musicais eclesiais tradicionais, mas configuram uma forma própria de organização da experiência musical-religiosa, com lógicas administrativas, autorais e comunitárias específicas que merecem descrição e análise sistemáticas.</p>
+<p>O pesquisador chega a esta proposta a partir de trajetória plural que articula formação técnica e artística. Mestre em Engenharia Elétrica pela Pontifícia Universidade Católica de Minas Gerais (2018), com dissertação intitulada <em>Projeto Ótimo de uma Antena Patch com Metamaterial</em>, catalogada na Biblioteca da PUC Minas sob CDU 621.396.67, e com artigo correlato publicado nos anais da 21st International Conference on the Computation of Electromagnetic Fields (COMPUMAG 2017), realizada em Daejeon, Coreia do Sul. Licenciado em Educação Artística com habilitação em Música pela Faculdade Mozarteum de São Paulo (FAMOSP, 2024). Atualmente, atua como professor concursado da rede municipal de ensino de Contagem/MG, com prática docente continuada em música na educação básica.</p>
+<p>Essa trajetória dupla — engenharia e música, ofício técnico e arte — confere ao pesquisador uma posição peculiar para abordar o objeto proposto. A vivência familiar do pesquisador na música, herança recebida do pai Izaias Maciel, músico em atividade, que se apresentou em escolas durante a infância do autor, fornece base experiencial que precede e sustenta a investigação acadêmica aqui proposta.</p>
+
+<h2 class="secao" id="s2">2. Problema de pesquisa</h2>
+<p>O cenário religioso brasileiro contemporâneo apresenta transformações significativas que vão além do simples crescimento ou declínio de denominações específicas. Dados do Censo demográfico mais recente, somados a pesquisas como as do Datafolha e do Pew Research Center, indicam aumento expressivo das categorias &ldquo;sem religião&rdquo;, &ldquo;crente sem igreja&rdquo; e &ldquo;religião própria&rdquo; — categorias que designam sujeitos que mantêm afiliação subjetiva a tradições religiosas, particularmente a cristã, sem participação ativa em comunidade eclesial específica.</p>
+<p>Esses sujeitos, contudo, não abandonam necessariamente as práticas religiosas que herdaram. Em particular, a prática musical de tradição cristã continua a ocorrer entre eles, ainda que reconfigurada: cantam Salmos em encontros familiares, organizam corais comunitários sem patrocínio eclesial, gravam interpretações de hinos em plataformas digitais, mantêm grupos de estudo bíblico-musical em escolas públicas e ONGs, formam coletivos artísticos que mobilizam estética sacra sem afiliação institucional.</p>
+<p>O problema central pode ser formulado nos seguintes termos:</p>
+<blockquote>Como se organizam, em sua dimensão de gestão, as práticas musicais de tradição cristã que se desenvolvem no Brasil contemporâneo em contextos não-eclesiais — isto é, sem mediação de igreja específica, sem submissão a autoridade pastoral denominacional e sem vinculação orgânica a corpo eclesiástico —, e que tipos de articulação entre autonomia subjetiva, dimensão comunitária e função de cuidado podem ser identificados nesses coletivos?</blockquote>
+<p>Deste problema central derivam questões secundárias: que mecanismos esses coletivos desenvolvem para definição de repertório? Como se sustentam economicamente? Como resolvem questões de autoridade interpretativa? Em que medida essas práticas cumprem, para seus integrantes, função de cuidado análoga à descrita pela tradição musicoterapêutica e pela própria narrativa bíblica de Davi tocando para Saul (1 Samuel 16)?</p>
+
+<h2 class="secao" id="s3">3. Hipóteses de trabalho</h2>
+<div class="hipotese"><strong>Hipótese 1.</strong> Os coletivos musicais de tradição cristã em contextos não-eclesiais no Brasil contemporâneo desenvolvem formas próprias de gestão que não derivam diretamente das estruturas eclesiais tradicionais, mas que tampouco se confundem com formas seculares de gestão artística. Configuram modelo organizacional híbrido, com lógicas próprias.</div>
+<div class="hipotese"><strong>Hipótese 2.</strong> Nesses coletivos, a dimensão de cuidado — terapêutica, espiritual, comunitária — opera de modo central e estruturante, e não apenas como efeito colateral da prática musical. A música é simultaneamente expressão estética, prática espiritual e instância de cuidado mútuo.</div>
+<div class="hipotese"><strong>Hipótese 3.</strong> A categoria do não-pertencimento institucional não deve ser lida como ausência ou carência, mas como modo positivo de organização da experiência religioso-musical, com seus próprios princípios, suas próprias tensões e seus próprios efeitos sobre os sujeitos envolvidos.</div>
+
+<h2 class="secao" id="s4">4. Objetivos</h2>
+<h3 class="subsecao">4.1. Objetivo geral</h3>
+<p>Investigar, sob perspectiva interdisciplinar das Ciências da Religião, as práticas musicais de tradição cristã que ocorrem em contextos não-eclesiais no Brasil contemporâneo, com foco em suas formas de gestão, em suas dinâmicas de autonomia subjetiva e comunitária, e em suas funções de cuidado.</p>
+<h3 class="subsecao">4.2. Objetivos específicos</h3>
+<ul class="lista-itens">
+  <li>Mapear, em Belo Horizonte e região metropolitana, coletivos musicais de tradição cristã que operem em contextos não-eclesiais.</li>
+  <li>Realizar pesquisa de campo em três a cinco coletivos selecionados, por meio de observação participante, entrevistas semiestruturadas e análise documental.</li>
+  <li>Descrever e analisar as formas de gestão identificadas, comparando-as com modelos eclesiais tradicionais e com modelos seculares.</li>
+  <li>Analisar como a dimensão de cuidado opera nesses coletivos, mobilizando o referencial da tradição musicoterapêutica e dos estudos sobre religião e bem-estar.</li>
+  <li>Discutir o significado teórico do fenômeno do não-pertencimento institucional para os estudos das Ciências da Religião.</li>
+  <li>Produzir tese de doutorado com publicação derivada em pelo menos dois periódicos Qualis A4-B1 e apresentação em congressos da área.</li>
+</ul>
+
+<h2 class="secao" id="s5">5. Justificativa</h2>
+<p>A pesquisa proposta justifica-se em quatro frentes complementares.</p>
+<p>Do ponto de vista acadêmico, contribui para o adensamento de literatura ainda escassa no Brasil sobre a intersecção entre estudos da religião, etnomusicologia e estudos da gestão cultural. A maior parte da literatura sobre música religiosa brasileira concentra-se ou na música eclesial institucional ou na música religiosa de matriz afro-brasileira. O território intermediário aqui proposto permanece pouco explorado.</p>
+<p>Do ponto de vista do campo das Ciências da Religião, a pesquisa oferece estudo de caso privilegiado para os debates contemporâneos sobre secularização, individualização religiosa e novas formas de espiritualidade. As teorias clássicas (Berger, Wilson) e suas revisões recentes (Casanova, Hervieu-Léger, Taylor) ganham, com a investigação proposta, base empírica para discussão.</p>
+<p>Do ponto de vista social, a pesquisa pretende contribuir para o reconhecimento de práticas culturais e espirituais que envolvem hoje, no Brasil, milhões de pessoas — particularmente em contextos urbanos onde o desencaixe entre identificação religiosa subjetiva e pertencimento institucional é especialmente pronunciado.</p>
+<p>Do ponto de vista da continuidade formativa do pesquisador, esta proposta representa a articulação madura entre sua trajetória técnica (Mestrado em Engenharia Elétrica, 2018) e sua formação artística (Licenciatura em Música pela FAMOSP, 2024). O ferramental analítico desenvolvido no mestrado sob orientação da Profª. Drª. Rose Mary de Souza Batalha transfere-se, com adaptações próprias ao campo qualitativo, para a investigação aqui proposta.</p>
+
+<h2 class="secao" id="s6">6. Fundamentação teórica preliminar</h2>
+<p>A pesquisa articulará quatro eixos teóricos principais.</p>
+<h3 class="subsecao">6.1. Estudos da religião e secularização contemporânea</h3>
+<p>Mobilização do quadro teórico clássico (Peter Berger, Bryan Wilson) e de suas revisões recentes (José Casanova, Danièle Hervieu-Léger, Charles Taylor). Particularmente relevante será a noção de Hervieu-Léger de &ldquo;religião como cadeia de memória&rdquo;.</p>
+<h3 class="subsecao">6.2. Etnomusicologia e estudos da paisagem sonora religiosa</h3>
+<p>Apoio nos trabalhos de Steven Feld sobre acustemologia e nos estudos de R. Murray Schafer sobre paisagem sonora. No contexto brasileiro, mobilização da obra de José Miguel Wisnik e de pesquisas etnomusicológicas realizadas em programas como o PPG-MUS da UFMG.</p>
+<h3 class="subsecao">6.3. Tradição musical cristã e teologia da música</h3>
+<p>Mobilização da tradição teológica sobre música, com atenção especial à exegese de 1 Samuel 16 (Davi tocando harpa para Saul) e à interpretação dos Salmos como modelo de prática musical religiosa.</p>
+<h3 class="subsecao">6.4. Filosofia da música e estudos do cuidado</h3>
+<p>Diálogo com a filosofia da música ocidental contemporânea, particularmente com Vladimir Jankélévitch (<em>La Musique et l&rsquo;Ineffable</em>), Roger Scruton (<em>The Aesthetics of Music</em>) e Wisnik. Articulação com os estudos contemporâneos sobre cuidado, mobilizando a literatura sobre musicoterapia (Kenneth Bruscia).</p>
+
+<h2 class="secao" id="s7">7. Metodologia</h2>
+<p>A pesquisa adotará desenho metodológico misto, predominantemente qualitativo, combinando procedimentos da etnografia religiosa, da pesquisa documental e da análise de conteúdo. Cinco fases articuladas ao longo de 48 meses:</p>
+<h3 class="subsecao">Fase 1 — Revisão bibliográfica e disciplinar (meses 1 a 12)</h3>
+<p>Disciplinas obrigatórias do PPG Ciências da Religião da PUC Minas. Revisão sistemática da literatura nos quatro eixos teóricos.</p>
+<h3 class="subsecao">Fase 2 — Mapeamento e seleção de coletivos (meses 6 a 18)</h3>
+<p>Identificação, em Belo Horizonte e na região metropolitana (incluindo Contagem), de coletivos musicais de tradição cristã que operem em contextos não-eclesiais. Seleção final de três a cinco coletivos.</p>
+<h3 class="subsecao">Fase 3 — Trabalho de campo (meses 12 a 30)</h3>
+<p>Observação participante, entrevistas semiestruturadas (mínimo de cinco por coletivo) e análise documental. A pesquisa seguirá os princípios éticos previstos na Resolução CNS 466/2012 e 510/2016, com submissão ao Comitê de Ética em Pesquisa da PUC Minas e obtenção de TCLE.</p>
+<h3 class="subsecao">Fase 4 — Análise e teorização (meses 24 a 42)</h3>
+<p>Análise dos dados por procedimentos de análise de conteúdo (Bardin) e análise comparativa entre os coletivos. Construção de tipologia das formas de gestão identificadas.</p>
+<h3 class="subsecao">Fase 5 — Redação e defesa (meses 36 a 48)</h3>
+<p>Redação da tese. Publicação de artigos em periódicos Qualis A4-B1 (REVER, Horizonte, Numen, Religião e Sociedade). Apresentação em congressos (SOTER, ANPTECRE). Defesa pública.</p>
+
+<h2 class="secao" id="s8">8. Cronograma</h2>
+<table class="cronograma">
+  <thead>
+    <tr><th>Atividade</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Disciplinas obrigatórias e revisão bibliográfica</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Mapeamento de coletivos musicais não-eclesiais</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Trabalho de campo: entrevistas e observação</td><td></td><td>X</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td></tr>
+    <tr><td>Análise dos dados de campo</td><td></td><td></td><td>X</td><td>X</td><td>X</td><td>X</td><td></td><td></td></tr>
+    <tr><td>Exame de qualificação</td><td></td><td></td><td>X</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Publicação de artigos em periódicos Qualis</td><td></td><td></td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td></td></tr>
+    <tr><td>Apresentação em congressos (SOTER, ANPTECRE)</td><td></td><td></td><td>X</td><td></td><td>X</td><td></td><td>X</td><td></td></tr>
+    <tr><td>Eventual estágio sanduíche (PDSE/CAPES)</td><td></td><td></td><td></td><td>X</td><td>X</td><td></td><td></td><td></td></tr>
+    <tr><td>Redação da tese</td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+    <tr><td>Defesa da tese</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td></tr>
+  </tbody>
+</table>
+
+<h2 class="secao" id="refs">Referências</h2>
+<ol class="referencias">
+  <li>BARDIN, Laurence. <em>Análise de conteúdo</em>. Trad. L. A. Reto e A. Pinheiro. São Paulo: Edições 70, 2011.</li>
+  <li>BATALHA, Rose Mary de Souza (orient.); SOUZA, Eduardo de. <em>Projeto ótimo de uma antena patch com metamaterial</em>. 2018. 79 f. Dissertação (Mestrado em Engenharia Elétrica) — Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, 2018. Catalogada na Biblioteca da PUC Minas sob CDU 621.396.67. Disponível em: <a href="https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf">https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf</a>.</li>
+  <li>BERGER, Peter L. <em>O dossel sagrado</em>: elementos para uma teoria sociológica da religião. Trad. J. C. Barcellos. São Paulo: Paulus, 1985.</li>
+  <li>BÍBLIA SAGRADA. <em>Almeida Revista e Atualizada</em>. Barueri: Sociedade Bíblica do Brasil, 1993.</li>
+  <li>BRUSCIA, Kenneth E. <em>Definindo musicoterapia</em>. Trad. M. Ronchini. Rio de Janeiro: Enelivros, 2000.</li>
+  <li>CASANOVA, José. <em>Public religions in the modern world</em>. Chicago: University of Chicago Press, 1994.</li>
+  <li>FELD, Steven. <em>Sound and sentiment</em>: birds, weeping, poetics, and song in Kaluli expression. Philadelphia: University of Pennsylvania Press, 1982.</li>
+  <li>HERVIEU-LÉGER, Danièle. <em>O peregrino e o convertido</em>: a religião em movimento. Trad. J. T. dos Santos. Petrópolis: Vozes, 2008.</li>
+  <li>JANKÉLÉVITCH, Vladimir. <em>La musique et l&rsquo;ineffable</em>. Paris: Seuil, 1983.</li>
+  <li>SCHAFER, R. Murray. <em>O ouvido pensante</em>. Trad. M. T. Fonterrada et al. São Paulo: Editora UNESP, 1991.</li>
+  <li>SCHAFER, R. Murray. <em>The soundscape</em>: our sonic environment and the tuning of the world. Rochester: Destiny Books, 1994.</li>
+  <li>SCRUTON, Roger. <em>The aesthetics of music</em>. Oxford: Oxford University Press, 1997.</li>
+  <li>SOUZA, Eduardo de; BATALHA, Rose Mary de Souza; SOARES, Gustavo Luís. Optimization of a patch antenna with metamaterial. In: <em>21st International Conference on the Computation of Electromagnetic Fields (COMPUMAG 2017)</em>, Daejeon, Coreia do Sul, 2017. Anais... Daejeon: COMPUMAG, 2017.</li>
+  <li>TAYLOR, Charles. <em>Uma era secular</em>. Trad. N. Pereira. São Leopoldo: Editora Unisinos, 2010.</li>
+  <li>WISNIK, José Miguel. <em>O som e o sentido</em>: uma outra história das músicas. São Paulo: Companhia das Letras, 1989.</li>
+</ol>
+
+<footer class="assinatura">
+  <p class="destaque-rodape">Eduardo de Souza</p>
+  <p>Mestre em Engenharia Elétrica (PUC Minas, 2018) · Licenciado em Música (FAMOSP, 2024)<br>
+  Professor da rede municipal de Contagem/MG · Contagem, Minas Gerais, Brasil<br>
+  Pré-projeto autoral em desenvolvimento · Publicado em eaqvd.com/pedagogia/ · Maio de 2026</p>
+</footer>
+
+</div>
+</body>
+</html>

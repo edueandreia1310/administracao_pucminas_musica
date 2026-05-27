@@ -1,0 +1,308 @@
+\documentclass[12pt,a4paper]{article}
+
+% ========== PACOTES (compatíveis com TeX Live padrão) ==========
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{times}
+\usepackage{csquotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[round,authoryear]{natbib}
+
+% Hifenização em português sem depender do babel-portuguese
+\hyphenation{mu-si-co-te-ra-pia mu-si-co-te-ra-pêu-tica fe-no-me-no-ló-gi-ca
+me-ta-ma-te-rial e-le-tro-mag-né-ti-cas com-po-si-tor com-po-si-cio-nal
+in-ven-ção in-ven-ções pe-da-go-gi-ca pe-da-gó-gi-co tem-po-ra-li-da-de
+in-tras-cen-den-tal mu-si-cal me-lódi-ca har-mô-ni-ca contraponto contrapontístico
+es-tro-fi-ca-ção or-ni-to-lo-gi-ca trans-cri-ção transcrições polifo-nia
+inter-pre-ta-ti-va paralelismo Hervieu-Léger Schopenhauer Jankélévitch
+Wahrheitsgehalt scrutoniano jankélévitchiano interlocução interlocutor}
+
+% ========== FORMATAÇÃO ==========
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\section}{0pt}{18pt}{12pt}
+\titlespacing*{\subsection}{0pt}{14pt}{8pt}
+
+% ========== METADADOS PDF ==========
+\hypersetup{
+  pdftitle={A invencao melodica como atracao da musica natural},
+  pdfauthor={Eduardo de Souza},
+  pdfsubject={Filosofia da Musica e Educacao Musical},
+  pdfkeywords={invencao melodica; paisagem sonora; educacao musical; filosofia da musica; harpa de Davi}
+}
+
+\begin{document}
+
+% ========== TÍTULO ==========
+\begin{center}
+{\Large\bfseries A invenção melódica como atração da música natural:}\\[0.5em]
+{\large três ciclos da harpa de Davi em diálogo com a filosofia da música}\\[1.5em]
+{Eduardo de Souza\footnote{Licenciado em Educação Artística com habilitação em Música pela Faculdade Mozarteum de São Paulo (FAMOSP, 2024). Mestre em Engenharia Elétrica pela Pontifícia Universidade Católica de Minas Gerais (PUC Minas, 2018). Professor da rede municipal de Contagem, Minas Gerais. Contato: \texttt{edueandreia@gmail.com}.}}\\[0.5em]
+{\small Maio de 2026}
+\end{center}
+
+\vspace{1em}
+
+% ========== RESUMO ==========
+\noindent\textbf{Resumo}\\[0.5em]
+{\small\noindent O presente artigo propõe uma reflexão técnico-filosófica sobre a invenção melódica como dispositivo de atração da chamada \textit{música natural} --- conceito que recobre, neste estudo, três camadas articuladas: fenomenológica (paisagem sonora concreta), acústica (leis físicas que regem o som) e estrutural (padrões morfológicos espontâneos). A hipótese defendida é que a melodia inventada, quando construída com atenção a essas três camadas, deixa de operar como simples imitação e passa a funcionar como ressonador formal capaz de tornar audível, ao ouvinte, aquilo que no mundo já soa em estado latente. A fundamentação articula procedimentos técnicos da tradição composicional ocidental --- série harmônica como princípio gerador, modos de transposição limitada à maneira de Messiaen, motivo bachiano como célula mimética, temporalidades expandidas em Cage e Schafer --- com uma leitura em três ciclos da figura paradigmática de Davi: o ciclo da escuta (Davi pastor), o ciclo da invenção (Davi salmista) e o ciclo do cuidado (Davi tocando para Saul, em 1 Samuel 16). O artigo dialoga com cinco vozes da filosofia da música ocidental contemporânea: Schopenhauer, Jankélévitch, Adorno, Scruton e Wisnik.}
+
+\vspace{0.5em}
+\noindent\textbf{Palavras-chave:} invenção melódica; paisagem sonora; educação musical; filosofia da música; harpa de Davi; cuidado.
+
+\vspace{0.5em}
+
+\noindent\textbf{Abstract}\\[0.5em]
+{\small\noindent This article proposes a technical-philosophical reflection on melodic invention as a device of attraction of so-called \textit{natural music} --- a concept that, in this study, covers three articulated layers: phenomenological (the concrete soundscape), acoustic (the physical laws that govern sound), and structural (the morphological patterns that emerge spontaneously). The hypothesis defended is that invented melody, when constructed with attention to these three layers, ceases to operate as simple imitation and begins to function as a formal resonator capable of making audible, to the listener, what already sounds latently in the world. The article articulates compositional procedures from the Western tradition with a reading in three cycles of the paradigmatic figure of David, in dialogue with five voices of contemporary Western philosophy of music: Schopenhauer, Jankélévitch, Adorno, Scruton, and Wisnik.}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} melodic invention; soundscape; music education; philosophy of music; harp of David; care.
+
+\vspace{1.5em}
+
+% ========== EPÍGRAFE ==========
+\begin{flushright}
+\begin{minipage}{0.65\textwidth}
+\itshape\small
+``Se a Arte não vem de dentro, não é arte: é expressão de circunstância.''
+
+\upshape\rmfamily\normalsize\flushright
+--- Ronaldo Cupertino da Silva, artista plástico\\
+(comunicação pessoal ao autor, com autorização formal)
+\end{minipage}
+\end{flushright}
+
+\vspace{1em}
+
+% ========== 1. INTRODUÇÃO ==========
+\section{Introdução}
+
+Há, na história da música ocidental, uma tensão fecunda entre a invenção --- entendida como artifício compositivo, gesto deliberado do sujeito criador --- e aquilo que se costuma chamar de \textit{música natural}: a soma de fenômenos sonoros que ocorrem independentemente da intenção humana, sejam eles os cantos dos pássaros, o ruído das águas, o sopro dos ventos ou a ressonância modal dos corpos vibrantes. O presente artigo examina como a melodia inventada pode funcionar não apenas como representação mimética dessa música natural, mas, mais profundamente, como dispositivo de \textit{atração}: estrutura sonora capaz de chamar à audição o que, no mundo, já soa em estado latente.
+
+A hipótese de trabalho é a seguinte: a melodia inventada, quando construída com atenção aos princípios acústicos e morfológicos do som natural, deixa de ser simples imitação e passa a operar como ressonador formal --- espaço onde a paisagem sonora encontra condições para se manifestar musicalmente. Essa hipótese encontra ressonância imediata na frase tomada como epígrafe deste artigo: se a arte vem de dentro, então o que ela atrai é precisamente aquilo que reconhece, do lado de fora, o eco do que já estava no interior.
+
+O texto articula-se em torno de três conceitos centrais --- escuta, invenção e cuidado --- e propõe que sua articulação seja lida como reatualização de um paradigma musical que a tradição cristã encontrou na figura de Davi: pastor que escuta, salmista que inventa, intérprete que cura. A Seção 2 estabelece o referencial teórico mediante revisão bibliográfica sistemática dos campos mobilizados. As Seções 3 a 6 desenvolvem o aparato técnico-conceitual. A Seção 7 apresenta aplicações pedagógicas. A Seção 8, central, desdobra a figura de Davi em três ciclos articulados. A Seção 9 articula a reflexão com cinco vozes da filosofia da música. As Seções 10 e 11 oferecem exemplos paradigmáticos e considerações finais.
+
+% ========== 2. REVISÃO BIBLIOGRÁFICA — NOVA ==========
+\section{Revisão bibliográfica}
+
+A reflexão proposta articula quatro campos disciplinares que vêm sendo desenvolvidos, ao longo do século XX e início do XXI, com produção bibliográfica significativa. Esta seção apresenta os principais trabalhos mobilizados, organizados por eixo temático, com indicação das contribuições específicas que cada autor oferece ao argumento aqui desenvolvido.
+
+\subsection{Eixo 1: Tradição composicional ocidental e teoria da invenção}
+
+A noção técnica de \textit{invenção} como forma musical breve e contrapontística remonta às \textit{Invenções a duas e três vozes} (BWV 772-801) de Johann Sebastian Bach \citep{Bach1723}, cuja influência sobre a tradição composicional ocidental constitui referência incontornável para qualquer discussão da matéria. A noção retórica anterior, herdada da \textit{inventio} clássica, encontra desdobramento contemporâneo nos trabalhos de Olivier Messiaen, particularmente em seu \textit{Tratado de Ritmo, de Cor e de Ornitologia} \citep{Messiaen1994}, obra monumental em sete volumes que sistematiza tanto seus modos de transposição limitada quanto sua prática de transcrição ornitológica. Gérard Grisey, em seus \textit{Écrits} \citep{Grisey2008}, oferece formulação rigorosa da estética espectral, que serve de ponte entre a tradição modal messiaênica e os procedimentos contemporâneos de derivação melódica a partir da série harmônica.
+
+\subsection{Eixo 2: Paisagem sonora e ecomusicologia}
+
+O conceito de \textit{paisagem sonora} (\textit{soundscape}) foi cunhado e desenvolvido por R. Murray Schafer em duas obras complementares: \textit{The Soundscape: Our Sonic Environment and the Tuning of the World} \citep{Schafer1994}, que estabelece o quadro teórico geral, e \textit{O Ouvido Pensante} \citep{Schafer1991}, traduzido para o português brasileiro com prefácio de Marisa Trench de Oliveira Fonterrada, que desdobra implicações pedagógicas do conceito. A noção de \textit{acustemologia} desenvolvida por Steven Feld em \textit{Sound and Sentiment} \citep{Feld1982}, a partir de etnografia entre os Kaluli da Papua-Nova Guiné, oferece base antropológica para pensar a escuta como modo de conhecimento. No contexto brasileiro, \citet{Fonterrada2008}, em \textit{De Tramas e Fios}, articula a tradição schaferiana com a pedagogia musical brasileira, fornecendo ponto de partida para a apropriação contextualizada dessas noções na educação básica nacional.
+
+A obra-síntese para a articulação som-música-sentido em chave brasileira é \textit{O Som e o Sentido}, de \citet{Wisnik1989}, cuja teoria das três dimensões físicas do som (ruído, pulso, altura) cruzadas com três dimensões formais da música constitui ferramenta analítica de poder considerável e ainda subexplorado pela literatura.
+
+\subsection{Eixo 3: Tradição musical cristã e exegese da Harpa de Davi}
+
+A figura de Davi como músico paradigmático tem, como fonte primária, o relato bíblico de 1 Samuel 16 e o conjunto dos Salmos \citep{Biblia1993}. A recepção dessa figura ao longo da tradição teológica é vasta, indo dos comentários patrísticos de Agostinho aos estudos contemporâneos sobre teologia da música. Para os propósitos deste artigo, mobiliza-se a tradição musicoterapêutica que toma Davi como paradigma fundador, sintetizada por Kenneth Bruscia em \textit{Definindo Musicoterapia} \citep{Bruscia2000}, obra de referência para o campo profissional no Brasil.
+
+\subsection{Eixo 4: Filosofia da música ocidental contemporânea}
+
+A reflexão filosófica sobre música mobilizada neste artigo articula cinco vozes principais. \citet{Schopenhauer2005}, em \textit{O Mundo como Vontade e Representação}, oferece o estatuto metafísico clássico da música como expressão direta da Vontade. \citet{Jankelevitch1983}, em \textit{La Musique et l'Ineffable}, desenvolve a tese da música como registro do inefável. \citet{Adorno2018}, em \textit{Filosofia da Nova Música}, introduz o conceito de \textit{conteúdo de verdade} (\textit{Wahrheitsgehalt}) que se realiza no enfrentamento histórico entre forma e material. \citet{Scruton1997}, em \textit{The Aesthetics of Music}, desenvolve a noção de \textit{intencionalidade musical} como ato distinto da escuta de mero som. A esses se soma John Cage, particularmente em \textit{Silence: Lectures and Writings} \citep{Cage1961}, cuja meditação sobre silêncio e duração informa o tratamento do tempo musical aqui proposto.
+
+\subsection{Síntese da revisão e lacuna identificada}
+
+A revisão dos quatro eixos permite identificar uma lacuna específica que este artigo se propõe a explorar: embora a literatura sobre paisagem sonora (Eixo 2) e sobre composição espectral (Eixo 1) discuta extensivamente as relações entre música e mundo natural, e embora a literatura sobre filosofia da música (Eixo 4) trate da relação entre música e interioridade do sujeito, a articulação dessas duas dimensões mediada pela figura paradigmática de Davi (Eixo 3) e operacionalizada em prática pedagógica concreta para a educação básica brasileira (cruzamento entre os Eixos 2 e 3) constitui território ainda pouco explorado. É nesse cruzamento que o presente artigo busca contribuir.
+
+% ========== 3. INVENÇÃO ==========
+\section{A invenção como forma e como gesto}
+
+O termo \textit{invenção} carrega, na tradição musical, ao menos dois sentidos complementares. No primeiro, mais técnico, refere-se a uma forma breve, monotemática, fundada na exploração contrapontística de um motivo curto --- modelo cristalizado em \citet{Bach1723}. No segundo sentido, herdado da retórica clássica, \textit{inventio} designa a etapa inicial do processo criativo: a descoberta dos lugares-comuns, das ideias matriciais a partir das quais o discurso se desdobra. Aplicada à melodia, a invenção retórica é menos um produto que um achado --- algo que se encontra, mais do que se fabrica.
+
+Esses dois sentidos convergem no ponto que interessa: ambos pressupõem uma matéria mínima, um germe que contém em potência o desdobramento da peça. É justamente nessa exigência de concentração motívica que a invenção se aproxima da economia formal observável nos sons da natureza. O canto de um pássaro raramente excede algumas células rítmico-melódicas que se repetem com variações sutis; o ruído da água é, do ponto de vista espectral, um tema com infinitas variações sobre si mesmo.
+
+% ========== 4. MÚSICA NATURAL ==========
+\section{A música natural: definições e camadas}
+
+\textit{Música natural} recobre, neste artigo, três camadas distintas e articuladas. A \textbf{camada fenomenológica} refere-se ao som tal como se apresenta no mundo, antes de qualquer codificação musical: o canto dos animais, o vento entre as folhas, a chuva, o murmúrio de um rio --- objeto privilegiado dos estudos schaferianos sobre paisagem sonora \citep{Schafer1994}. A \textbf{camada acústica} compreende as leis físicas que regem a produção e propagação do som: série harmônica, modos de vibração, batimento, ressonância, decaimento espectral. A \textbf{camada estrutural} reúne os padrões morfológicos que emergem espontaneamente nos fenômenos naturais: simetrias, recorrências, distribuições estatísticas, formas fractais e auto-similares.
+
+Esses três planos articulam-se. A paisagem sonora concreta é manifestação audível das leis acústicas, as quais, por sua vez, organizam-se segundo padrões formais identificáveis. Compor sob a influência da música natural significa atuar sobre essas três camadas simultaneamente \citep{Wisnik1989}.
+
+% ========== 5. PROCEDIMENTOS ==========
+\section{Procedimentos técnicos para uma melodia que atrai o natural}
+
+\subsection{A série harmônica como princípio gerador}
+
+Toda nota produzida por um corpo vibrante traz consigo uma constelação de parciais ordenados segundo razões inteiras de frequência. A série harmônica é, nesse sentido, a primeira escala da natureza --- anterior a qualquer sistema temperado. \citet{Grisey2008} oferece a formulação mais rigorosa do princípio em chave composicional contemporânea.
+
+\subsection{Modos de transposição limitada}
+
+\citet{Messiaen1994} sistematizou os modos de transposição limitada --- coleções de alturas cuja simetria interna restringe o número de transposições distintas possíveis. Esses modos funcionam como filtros: estruturas inventadas que criam um ambiente harmônico em que a transcrição ornitológica encontra coerência interna. A invenção mais elaborada --- a construção modal --- é precisamente o que torna possível a manifestação musical do natural.
+
+\subsection{O motivo como célula mimética}
+
+Quando o compositor deriva o motivo de uma escuta atenta, instaura-se uma cadeia mimética que se desdobra por procedimentos contrapontísticos clássicos: inversão, retrógrado, aumentação, diminuição. Tais operações não são estranhas à natureza: ecos invertem espectros, eco e contra-eco produzem aumentações, a memória auditiva opera estreitamentos.
+
+\subsection{Tempo musical e tempo da paisagem}
+
+A música natural opera em escalas temporais distintas das que predominam na escritura ocidental tradicional. Uma invenção que pretenda atrair o natural precisa flexibilizar a quadratura métrica \citep{Cage1961}.
+
+% ========== 6. ESCUTA ==========
+\section{A escuta como ato compositivo primário}
+
+Nada do que foi exposto se sustenta sem uma prática anterior à escrita: a escuta. \citet{Schafer1991} propõe que o compositor contemporâneo deve, antes de tudo, educar o próprio ouvido para o mundo. Ouvir torna-se ato compositivo no momento em que se decide o que selecionar, o que destacar, o que reconhecer como musical em meio ao continuum acústico do ambiente. A melodia atrai o natural na medida em que foi, antes, atraída por ele.
+
+% ========== 7. PEDAGOGIA ==========
+\section{Aplicação na educação musical básica}
+
+Como professor de música atuante na rede municipal de Contagem, Minas Gerais, o autor tem explorado três tipos de exercício na sala de aula da educação básica brasileira, em diálogo direto com a tradição schaferiana mediada por \citet{Fonterrada2008}.
+
+\subsection{Cartografia sonora da escola}
+
+Percorrer os espaços da escola com a tarefa de escutar, sem julgar nem nomear. Cada estudante registra, em notação livre (gráfica, verbal ou musical), três sons que mais lhe chamaram a atenção.
+
+\subsection{Invenção sobre motivo encontrado}
+
+A partir da cartografia, cada estudante transcreve melodicamente um som registrado, e o desdobra por repetição, deslocamento de altura, inversão simples, expansão rítmica.
+
+\subsection{Coro de paisagem}
+
+Em formação coletiva, grupos pequenos reproduzem vocalmente elementos da paisagem (vento, chuva, pássaro), organizados em sequência ou sobreposição.
+
+Em todos os três exercícios, a invenção do estudante não é manifestação de talento individual prévio, mas produto de uma escuta cuidadosa do mundo. Essa inversão de eixo --- da expressão para a atenção --- é o que se propõe aqui como contributo à educação musical brasileira contemporânea.
+
+% ========== 8. HARPA DE DAVI ==========
+\section{A harpa de Davi em três ciclos}
+
+A frase de Ronaldo Cupertino, retomada aqui, encontra na figura de Davi sua ilustração mais antiga e mais alta. O jovem pastor de Belém, descrito em 1 Samuel 16 \citep{Biblia1993} como aquele cuja música acalmava o espírito atormentado do rei Saul, e a quem a tradição atribui os Salmos, tornou-se figura paradigmática do músico que toca a partir de uma interioridade em escuta de algo maior. Propõe-se aqui que essa figura seja lida em três ciclos distintos e complementares.
+
+\subsection{Primeiro ciclo --- A escuta: Davi pastor}
+
+Antes do palácio, antes da composição, Davi é pastor. A formação musical de Davi não começa em academia nem em mestre; começa nesse ouvido posto diariamente em escuta do mundo. O pastor que escuta é a condição de possibilidade do compositor que inventa.
+
+Como educador musical e estudante das relações entre música e cuidado humano, considero que a harpa de Davi foi a expressão máxima de algo que veio de dentro para expressar o sentimento natural --- perfeito --- do Poeta Supremo, que é Deus. Este primeiro ciclo aparece, em registro pedagógico contemporâneo, no exercício de cartografia sonora descrito na Seção 7.
+
+\subsection{Segundo ciclo --- A invenção: Davi salmista}
+
+Da escuta do pastor brota o salmista. Os Salmos \citep{Biblia1993} não são improvisos despreocupados --- são construções formais cuidadosas, com paralelismos hebraicos rigorosos, refrões, estruturas estróficas. São \textit{inventiones} no sentido pleno do termo. A invenção de Davi tem uma característica que a distingue: ela não inventa do nada, ela responde. Cada salmo é resposta a algo previamente escutado.
+
+De perspectiva pessoal, formada na dupla experiência da música como prática herdada e como objeto de reflexão acadêmica, a harpa de Davi parece a expressão máxima de algo que vem de dentro para encontrar o sentimento natural --- perfeito --- do Poeta Supremo, que é Deus. A frase de Ronaldo Cupertino encontra confirmação dupla neste segundo ciclo: nos Salmos, a arte vem de dentro de Davi e, ao mesmo tempo, vem de dentro do próprio Deus que o constitui.
+
+\subsection{Terceiro ciclo --- O cuidado: Davi e Saul}
+
+A passagem de 1 Samuel 16 \citep{Biblia1993} descreve Davi tocando harpa para Saul, e o espírito atormentado do rei se aquietando. É o paradigma fundador da musicoterapia ocidental, citado por toda a literatura clínica do campo \citep{Bruscia2000}. O que torna a música de Davi capaz desse efeito é a continuidade com os dois ciclos anteriores: ela é música de alguém que primeiro escutou o mundo, depois aprendeu a responder em forma. O que cura Saul não é a habilidade de Davi --- é a profundidade do que Davi traz.
+
+Entre os exemplos da tradição em que música, escuta e cuidado se entrelaçam, nenhum é tão fundo quanto a harpa de Davi: nela vê-se a expressão máxima de algo que veio de dentro para alcançar o sentimento natural --- perfeito --- do Poeta Supremo, que é Deus.
+
+\subsection{Síntese: os três ciclos como movimento único}
+
+Os três ciclos --- escuta, invenção, cuidado --- não são etapas separadas. São movimentos simultâneos e mutuamente sustentados de uma mesma prática musical integral. Davi pastoreia, compõe e cura ao mesmo tempo, porque a escuta sustenta a invenção, a invenção sustenta o cuidado, e o cuidado retroalimenta a escuta.
+
+% ========== 9. FILOSOFIA ==========
+\section{Diálogo com a tradição filosófica sobre música}
+
+\subsection{Schopenhauer e a música como expressão direta da Vontade}
+
+Em \textit{O Mundo como Vontade e Representação}, \citet{Schopenhauer2005} atribui à música um estatuto único entre as artes: ela expressa diretamente a Vontade metafísica, sem mediação de conceito. Essa tese ressoa, em chave secular, com a frase de Ronaldo Cupertino: o que a arte expressa não é a circunstância em que ela é feita, mas algo mais profundo.
+
+\subsection{Jankélévitch e o inefável musical}
+
+\citet{Jankelevitch1983} recusa qualquer redução da música ao conceito. A música opera em registro que escapa à linguagem proposicional e que, no entanto, comunica com clareza absoluta. A atração da música natural opera nesse registro do inefável.
+
+\subsection{Adorno e o conteúdo de verdade}
+
+\citet{Adorno2018} sustenta que a música possui \textit{Wahrheitsgehalt} que se realiza no enfrentamento histórico entre forma e material. Atrair o natural significa, em chave adorniana, atrair sem maquiagem o estado atual dessa naturalidade --- incluindo, hoje, motores, sirenes, ruído industrial.
+
+\subsection{Scruton e a intencionalidade musical}
+
+\citet{Scruton1997} defende que ouvir música é ato intencional distinto de ouvir mero som. A melodia inventada, quando bem construída, modifica a intencionalidade de escuta do ouvinte.
+
+\subsection{Wisnik e o sentido do som}
+
+\citet{Wisnik1989} articula as três dimensões físicas do som --- ruído, pulso, altura --- com as três dimensões formais da música. A invenção que atrai a música natural é aquela que mantém vivo, em seu interior, o ruído originário do mundo.
+
+\subsection{Síntese filosófica}
+
+Articulando essas cinco vozes, a tese central pode ser enunciada em formulação técnica: a invenção melódica como atração da música natural opera (a) como expressão direta de uma interioridade musical à maneira de Schopenhauer; (b) no registro do inefável jankélévitchiano; (c) submetendo-se à exigência adorniana de honestidade histórica; (d) modificando intencionalmente a escuta no sentido scrutoniano; e (e) preservando a tridimensionalidade som-pulso-altura descrita por Wisnik.
+
+% ========== 10. EXEMPLOS ==========
+\section{Exemplos paradigmáticos}
+
+Sem pretensão de exaustividade, vale citar algumas obras: Olivier Messiaen, \textit{Catalogue d'Oiseaux} (1956--1958); Heitor Villa-Lobos, \textit{Bachianas Brasileiras} nº 4, Prelúdio; Toru Takemitsu, \textit{From me flows what you call Time}; Gérard Grisey, \textit{Partiels}; R. Murray Schafer, \textit{Music for Wilderness Lake}.
+
+% ========== 11. CONSIDERAÇÕES FINAIS ==========
+\section{Considerações finais}
+
+Defender que a melodia inventada possa atrair a música natural não significa apagar a fronteira entre arte e mundo, nem reduzir a composição a um exercício mimético. Significa reconhecer que a invenção mais radical é a que se constrói com plena consciência das estruturas que regem o som no mundo.
+
+Aplicada à educação musical, essa concepção desloca o eixo da prática: o aluno passa a ser pensado como sujeito que aprende, primeiro, a escutar o mundo --- e só depois, a inventar. Aplicada à dimensão de cuidado, aponta para uma prática em que o músico opera como Davi: por atenção, não por imposição.
+
+Fecho com a frase de Ronaldo Cupertino, que abriu este artigo como epígrafe:
+
+\begin{quote}
+\itshape Se a Arte não vem de dentro, não é arte: é expressão de circunstância.
+\end{quote}
+
+A tarefa do artista, do educador e do músico é a mesma: oferecer ao outro aquilo que vem de dentro, com integridade, sem se deixar reduzir à circunstância.
+
+% ========== REFERÊNCIAS ==========
+\renewcommand{\refname}{Referências}
+\begin{thebibliography}{99}
+
+\bibitem[Adorno(2018)]{Adorno2018}
+ADORNO, T. W. \textit{Filosofia da nova música}. Trad. M. Bandeira. São Paulo: Perspectiva, 2018.
+
+\bibitem[Bach(1723)]{Bach1723}
+BACH, J. S. \textit{Inventionen und Sinfonien}, BWV 772--801. Edição de Köthen, 1723. Edição moderna: Bärenreiter, Kassel.
+
+\bibitem[Bíblia(1993)]{Biblia1993}
+BÍBLIA SAGRADA. \textit{Almeida Revista e Atualizada}. Barueri: Sociedade Bíblica do Brasil, 1993. Particularmente: 1 Samuel 16; Livro dos Salmos.
+
+\bibitem[Bruscia(2000)]{Bruscia2000}
+BRUSCIA, K. E. \textit{Definindo musicoterapia}. Trad. M. Ronchini. Rio de Janeiro: Enelivros, 2000.
+
+\bibitem[Cage(1961)]{Cage1961}
+CAGE, J. \textit{Silence: Lectures and Writings}. Middletown: Wesleyan University Press, 1961.
+
+\bibitem[Feld(1982)]{Feld1982}
+FELD, S. \textit{Sound and Sentiment: Birds, Weeping, Poetics, and Song in Kaluli Expression}. Philadelphia: University of Pennsylvania Press, 1982.
+
+\bibitem[Fonterrada(2008)]{Fonterrada2008}
+FONTERRADA, M. T. de O. \textit{De tramas e fios: um ensaio sobre música e educação}. São Paulo: Editora UNESP, 2008.
+
+\bibitem[Grisey(2008)]{Grisey2008}
+GRISEY, G. \textit{Écrits ou l'invention de la musique spectrale}. Paris: MF, 2008.
+
+\bibitem[Jankélévitch(1983)]{Jankelevitch1983}
+JANKÉLÉVITCH, V. \textit{La musique et l'ineffable}. Paris: Seuil, 1983.
+
+\bibitem[Messiaen(1994)]{Messiaen1994}
+MESSIAEN, O. \textit{Traité de rythme, de couleur et d'ornithologie}. Paris: Alphonse Leduc, 1994--2002. 7 v.
+
+\bibitem[Schafer(1991)]{Schafer1991}
+SCHAFER, R. M. \textit{O ouvido pensante}. Trad. M. T. Fonterrada et al. São Paulo: Editora UNESP, 1991.
+
+\bibitem[Schafer(1994)]{Schafer1994}
+SCHAFER, R. M. \textit{The Soundscape: Our Sonic Environment and the Tuning of the World}. Rochester: Destiny Books, 1994.
+
+\bibitem[Schopenhauer(2005)]{Schopenhauer2005}
+SCHOPENHAUER, A. \textit{O mundo como vontade e representação}. Trad. J. Barboza. São Paulo: Unesp, 2005.
+
+\bibitem[Scruton(1997)]{Scruton1997}
+SCRUTON, R. \textit{The Aesthetics of Music}. Oxford: Oxford University Press, 1997.
+
+\bibitem[Silva(s.d.)]{Silva}
+SILVA, R. C. da. Comunicação pessoal ao autor. [s.d.]. Citada nesta obra mediante autorização formal do citado.
+
+\bibitem[Souza(2018)]{Souza2018}
+SOUZA, E. de. \textit{Projeto Ótimo de uma Antena Patch com Metamaterial}. 2018. 79 f. Dissertação (Mestrado em Engenharia Elétrica) --- Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, 2018. Orientadora: Rose Mary de Souza Batalha. Disponível em: \url{https://bib.pucminas.br/teses/EngEletrica_SouzaE_1.pdf}.
+
+\bibitem[Wisnik(1989)]{Wisnik1989}
+WISNIK, J. M. \textit{O som e o sentido: uma outra história das músicas}. São Paulo: Companhia das Letras, 1989.
+
+\end{thebibliography}
+
+\end{document}
